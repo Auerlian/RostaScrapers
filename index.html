@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rosta Experience Scrapers</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #fff;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --json-bg: #0f172a;
+      --json-text: #cbd5e1;
+      --price-bg: #ecfdf5;
+      --price-text: #065f46;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* Header */
+    .header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .header-title { font-size: 20px; font-weight: 700; }
+    .header-sub { font-size: 12px; color: var(--text-muted); }
+
+    /* Provider Tabs */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      background: #f1f5f9;
+      padding: 4px;
+      border-radius: 10px;
+    }
+    .tab {
+      padding: 8px 18px;
+      border: none;
+      background: transparent;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .tab:hover { color: var(--text); background: rgba(255,255,255,0.6); }
+    .tab.active { background: var(--card-bg); color: var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+
+    /* Main Layout */
+    .main {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 20px;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      height: calc(100vh - 68px);
+    }
+
+    /* Grid Panel */
+    .grid-panel {
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+    .grid-panel::-webkit-scrollbar { width: 6px; }
+    .grid-panel::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+    .count-badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    /* Experience Card */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #f1f5f9;
+      display: block;
+    }
+    .card-img-placeholder {
+      width: 100%;
+      height: 180px;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 13px;
+    }
+
+    .card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+    .card-provider {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .card-name { font-size: 16px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      flex: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-price {
+      display: inline-block;
+      background: var(--price-bg);
+      color: var(--price-text);
+      font-size: 14px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+    .card-price.no-price { background: #fef3c7; color: #92400e; }
+
+    .card-meta { border-top: 1px solid var(--border); padding-top: 12px; margin-top: auto; }
+    .card-meta-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .card-meta-row svg { flex-shrink: 0; margin-top: 2px; }
+    .card-meta-row a { color: var(--accent); text-decoration: none; }
+    .card-meta-row a:hover { text-decoration: underline; }
+    .card-location-extra { font-size: 11px; color: var(--text-light); }
+
+    .card-links { display: flex; gap: 12px; margin-top: 8px; }
+    .card-link {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .card-link:hover { text-decoration: underline; }
+
+    /* JSON Panel */
+    .json-panel {
+      background: var(--json-bg);
+      border-radius: var(--radius);
+      border: 1px solid #1e293b;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .json-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid #1e293b;
+      background: #1e293b;
+    }
+    .json-header-title { font-size: 13px; font-weight: 600; color: var(--json-text); }
+    .json-copy-btn {
+      padding: 4px 12px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: var(--json-text);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .json-copy-btn:hover { background: #334155; }
+    .json-copy-btn.copied { border-color: #22c55e; color: #22c55e; }
+
+    .json-content {
+      flex: 1;
+      overflow: auto;
+      padding: 16px;
+    }
+    .json-content::-webkit-scrollbar { width: 6px; }
+    .json-content::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .json-content pre {
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--json-text);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    /* JSON syntax highlighting */
+    .json-key { color: #7dd3fc; }
+    .json-string { color: #86efac; }
+    .json-number { color: #fbbf24; }
+    .json-null { color: #f87171; }
+    .json-bracket { color: #94a3b8; }
+
+    /* Loading */
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+      color: var(--text-muted);
+    }
+    .spinner {
+      width: 32px; height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .main { grid-template-columns: 1fr; height: auto; }
+      .json-panel { height: 500px; }
+    }
+    @media (max-width: 640px) {
+      .header { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div>
+      <div class="header-title">Rosta Experience Scrapers</div>
+      <div class="header-sub">London food &amp; drink experiences — scraped data viewer</div>
+    </div>
+    <div class="tabs" id="tabs"></div>
+  </header>
+
+  <main class="main">
+    <div class="grid-panel" id="grid-panel">
+      <div class="loading"><div class="spinner"></div><span>Loading experiences…</span></div>
+    </div>
+    <div class="json-panel">
+      <div class="json-header">
+        <span class="json-header-title" id="json-title">JSON Output</span>
+        <button class="json-copy-btn" id="copy-btn" onclick="copyJson()">Copy JSON</button>
+      </div>
+      <div class="json-content" id="json-content">
+        <pre id="json-pre"></pre>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const PROVIDERS = [
+      { id: 'pasta', name: 'Pasta Evangelists', file: 'pasta_evangelists_experiences.json' },
+      { id: 'comptoir', name: 'Comptoir Bakery', file: 'comptoir_bakery_experiences.json' },
+      { id: 'caravan', name: 'Caravan Coffee', file: 'caravan_coffee_school_experiences.json' },
+    ];
+
+    let allData = {};
+    let activeProvider = 'pasta';
+
+    // SVG icons (inline to avoid dependencies)
+    const ICON = {
+      pin: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+      mail: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+      globe: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+    };
+
+    function escapeHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function highlightJson(json) {
+      return json
+        .replace(/("(?:\\.|[^"\\])*")\s*:/g, '<span class="json-key">$1</span>:')
+        .replace(/:\s*("(?:\\.|[^"\\])*")/g, ': <span class="json-string">$1</span>')
+        .replace(/:\s*(\d+(?:\.\d+)?)/g, ': <span class="json-number">$1</span>')
+        .replace(/:\s*(null)/g, ': <span class="json-null">$1</span>')
+        .replace(/[\[\]{}]/g, '<span class="json-bracket">$&</span>');
+    }
+
+    function truncate(str, len) {
+      if (!str) return '';
+      return str.length > len ? str.slice(0, len) + '…' : str;
+    }
+
+    function formatLocation(loc) {
+      if (!loc) return '';
+      if (typeof loc === 'string') return escapeHtml(truncate(loc, 80));
+      if (Array.isArray(loc)) {
+        const first = escapeHtml(truncate(loc[0], 80));
+        if (loc.length > 1) return first + '<span class="card-location-extra"> + ' + (loc.length - 1) + ' more</span>';
+        return first;
+      }
+      return '';
+    }
+
+    function renderCard(item) {
+      const img = item.images && item.images.length > 0 && item.images[0]
+        ? '<img class="card-img" src="' + escapeHtml(item.images[0]) + '" alt="' + escapeHtml(item.experience_name || '') + '" onerror="this.outerHTML=\'<div class=card-img-placeholder>Image unavailable</div>\'" loading="lazy">'
+        : '<div class="card-img-placeholder">No image</div>';
+
+      const priceClass = item.price ? 'card-price' : 'card-price no-price';
+      const priceText = item.price || 'Price TBC';
+
+      let metaHtml = '';
+      if (item.detailed_location) {
+        metaHtml += '<div class="card-meta-row">' + ICON.pin + '<span>' + formatLocation(item.detailed_location) + '</span></div>';
+      }
+
+      let linksHtml = '';
+      if (item.email_contact) {
+        linksHtml += '<a class="card-link" href="mailto:' + escapeHtml(item.email_contact) + '">' + ICON.mail + ' Email</a>';
+      }
+      if (item.website) {
+        linksHtml += '<a class="card-link" href="' + escapeHtml(item.website) + '" target="_blank" rel="noopener">' + ICON.globe + ' Book / Website</a>';
+      }
+
+      return '<div class="card">'
+        + img
+        + '<div class="card-body">'
+        + '<div class="card-provider">' + escapeHtml(item.experience_provider_name || '') + '</div>'
+        + '<div class="card-name">' + escapeHtml(item.experience_name || 'Untitled') + '</div>'
+        + '<div class="card-desc">' + escapeHtml(item.experience_description || 'No description available.') + '</div>'
+        + '<span class="' + priceClass + '">' + escapeHtml(priceText) + '</span>'
+        + '<div class="card-meta">'
+        + metaHtml
+        + (linksHtml ? '<div class="card-links">' + linksHtml + '</div>' : '')
+        + '</div>'
+        + '</div>'
+        + '</div>';
+    }
+
+    function renderGrid(providerId) {
+      const panel = document.getElementById('grid-panel');
+      const data = allData[providerId] || [];
+
+      if (data.length === 0) {
+        panel.innerHTML = '<div class="loading"><span>No data loaded for this provider.</span></div>';
+        return;
+      }
+
+      const badge = '<span class="count-badge">' + data.length + ' experience' + (data.length !== 1 ? 's' : '') + '</span>';
+      const cards = data.map(renderCard).join('');
+      panel.innerHTML = badge + '<div class="grid">' + cards + '</div>';
+    }
+
+    function renderJson(providerId) {
+      const data = allData[providerId] || [];
+      const raw = JSON.stringify(data, null, 2);
+      document.getElementById('json-pre').innerHTML = highlightJson(escapeHtml(raw));
+      const provider = PROVIDERS.find(p => p.id === providerId);
+      document.getElementById('json-title').textContent = provider ? provider.file : 'JSON Output';
+    }
+
+    function switchProvider(id) {
+      activeProvider = id;
+      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.id === id));
+      renderGrid(id);
+      renderJson(id);
+    }
+
+    function copyJson() {
+      const data = allData[activeProvider] || [];
+      const raw = JSON.stringify(data, null, 2);
+      const btn = document.getElementById('copy-btn');
+      navigator.clipboard.writeText(raw).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy JSON'; btn.classList.remove('copied'); }, 2000);
+      }).catch(() => {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = raw;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy JSON'; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+
+    // Build tabs
+    function buildTabs() {
+      const tabsEl = document.getElementById('tabs');
+      tabsEl.innerHTML = PROVIDERS.map(p =>
+        '<button class="tab' + (p.id === activeProvider ? ' active' : '') + '" data-id="' + p.id + '" onclick="switchProvider(\'' + p.id + '\')">' + escapeHtml(p.name) + '</button>'
+      ).join('');
+    }
+
+    // Load all JSON files
+    async function loadAll() {
+      buildTabs();
+      const promises = PROVIDERS.map(async (p) => {
+        try {
+          const resp = await fetch(p.file);
+          if (!resp.ok) throw new Error('HTTP ' + resp.status);
+          allData[p.id] = await resp.json();
+        } catch (e) {
+          console.warn('Failed to load ' + p.file + ':', e);
+          allData[p.id] = [];
+        }
+      });
+      await Promise.all(promises);
+      switchProvider(activeProvider);
+    }
+
+    loadAll();
+  </script>
+</body>
+</html>

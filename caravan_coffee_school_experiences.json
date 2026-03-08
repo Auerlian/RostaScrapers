@@ -1,0 +1,50 @@
+[
+  {
+    "experience_name": "London Roastery Tour & Tasting",
+    "experience_description": "A GUIDED TOUR OF OUR NORTH LONDON ROASTERY, FOLLOWED BY A COFFEE TASTING WHERE YOU’LL LEARN ABOUT HOW & WHERE COFFEE IS GROWN, HOW WE ROAST IT AND DISCOVER BREWING TIPS & TRICKS.",
+    "experience_provider_name": "Caravan Coffee Roasters",
+    "detailed_location": "Lambworks Roastery Brewbar, North Road, London, N7 9DP",
+    "email_contact": null,
+    "price": "£40",
+    "website": "https://www.eventbrite.com/e/caravan-coffee-school-roastery-tour-and-tasting-class-tickets-431689724587",
+    "images": [
+      "https://caravanandco.com/cdn/shop/files/zz-01409.jpg?v=1752596006&width=1500"
+    ]
+  },
+  {
+    "experience_name": "Home Filter Class",
+    "experience_description": "LEARN ALL ABOUT BREWING FILTER COFFEE AT HOME, ACROSS 4 DIFFERENT METHODS: FROM A CLASSIC CAFETIERE TO A V60.",
+    "experience_provider_name": "Caravan Coffee Roasters",
+    "detailed_location": "Lambworks Roastery Brewbar, North Road, London, N7 9DP",
+    "email_contact": null,
+    "price": "£75",
+    "website": "https://www.eventbrite.com/e/caravan-coffee-school-home-filter-pourover-brewing-class-tickets-482408275137",
+    "images": [
+      "https://caravanandco.com/cdn/shop/files/filter-class.jpg?v=1681741049&width=1500"
+    ]
+  },
+  {
+    "experience_name": "Home Espresso Class",
+    "experience_description": "LEARN ABOUT ‘DIALLING IN’, STEAMING & POURING MILK AND EXPERIENCE MAKING COFFEE WITH PROFESSIONAL GRADE ESPRESSO MACHINES.",
+    "experience_provider_name": "Caravan Coffee Roasters",
+    "detailed_location": "Lambworks Roastery Brewbar, North Road, London, N7 9DP",
+    "email_contact": null,
+    "price": "£95",
+    "website": "https://www.eventbrite.com/e/caravan-coffee-school-home-espresso-class-tickets-482399849937",
+    "images": [
+      "https://caravanandco.com/cdn/shop/files/home-espresso_af3e94f2-d543-49ea-82cb-39613fc3fd3b.jpg?v=1681736149&width=1500"
+    ]
+  },
+  {
+    "experience_name": "Milk & Latte Art Class",
+    "experience_description": "WE ALL WANT TO BE ABLE TO POUR MILK LIKE THEY DO IN THE COFFEE SHOP – LET OUR BARISTAS SHOW YOU HOW YOU CAN AT HOME, WITH & WITHOUT FANCY KIT.",
+    "experience_provider_name": "Caravan Coffee Roasters",
+    "detailed_location": "Lambworks Roastery Brewbar, North Road, London, N7 9DP",
+    "email_contact": null,
+    "price": "£75",
+    "website": "https://www.eventbrite.com/e/caravan-coffee-school-home-milklatte-art-class-tickets-482433209717",
+    "images": [
+      "https://caravanandco.com/cdn/shop/files/Screenshot_2024-12-17_at_11.12.43.png?v=1734433988&width=1500"
+    ]
+  }
+]
