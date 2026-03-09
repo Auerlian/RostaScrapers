@@ -242,9 +242,12 @@
       padding: 12px 16px;
       border-bottom: 1px solid #1e293b;
       background: #1e293b;
+      flex-wrap: wrap;
+      gap: 8px;
     }
     .json-header-title { font-size: 13px; font-weight: 600; color: var(--json-text); }
-    .json-copy-btn {
+    .json-header-actions { display: flex; gap: 8px; }
+    .json-copy-btn, .csv-download-btn {
       padding: 4px 12px;
       border: 1px solid #334155;
       background: #0f172a;
@@ -255,8 +258,10 @@
       cursor: pointer;
       transition: all 0.15s;
     }
-    .json-copy-btn:hover { background: #334155; }
+    .json-copy-btn:hover, .csv-download-btn:hover { background: #334155; }
     .json-copy-btn.copied { border-color: #22c55e; color: #22c55e; }
+    .csv-download-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .csv-download-btn.processing { border-color: #fbbf24; color: #fbbf24; }
 
     .json-content {
       flex: 1;
@@ -367,7 +372,10 @@
     <div class="json-panel">
       <div class="json-header">
         <span class="json-header-title" id="json-title">JSON Output</span>
-        <button class="json-copy-btn" id="copy-btn" onclick="copyJson()">Copy JSON</button>
+        <div class="json-header-actions">
+          <button class="csv-download-btn" id="csv-btn" onclick="downloadCSV()">Download CSV</button>
+          <button class="json-copy-btn" id="copy-btn" onclick="copyJson()">Copy JSON</button>
+        </div>
       </div>
       <div class="json-content" id="json-content">
         <pre id="json-pre"></pre>
@@ -554,6 +562,127 @@
     }
 
     loadAll();
+
+    // CSV conversion with base64 images
+    async function imageUrlToBase64(url) {
+      try {
+        // Try direct fetch first
+        let response = await fetch(url);
+        
+        // If CORS error, try with CORS proxy
+        if (!response.ok) {
+          throw new Error('Direct fetch failed');
+        }
+        
+        const blob = await response.blob();
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onloadend = () => resolve(reader.result);
+          reader.onerror = reject;
+          reader.readAsDataURL(blob);
+        });
+      } catch (error) {
+        // Try with CORS proxy as fallback
+        try {
+          const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
+          const response = await fetch(proxyUrl);
+          const blob = await response.blob();
+          return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result);
+            reader.onerror = reject;
+            reader.readAsDataURL(blob);
+          });
+        } catch (proxyError) {
+          console.warn('Failed to convert image (both direct and proxy):', url, proxyError);
+          return url; // Return original URL as fallback
+        }
+      }
+    }
+
+    function escapeCSV(value) {
+      if (value === null || value === undefined) return '';
+      const str = String(value);
+      if (str.includes('"') || str.includes(',') || str.includes('\n')) {
+        return '"' + str.replace(/"/g, '""') + '"';
+      }
+      return str;
+    }
+
+    async function convertToCSV(data) {
+      if (!data || data.length === 0) return '';
+
+      const btn = document.getElementById('csv-btn');
+      btn.textContent = 'Processing...';
+      btn.classList.add('processing');
+      btn.disabled = true;
+
+      // Process images to base64
+      const processedData = [];
+      for (const item of data) {
+        const newItem = { ...item };
+        
+        // Convert images array to base64
+        if (newItem.images && Array.isArray(newItem.images) && newItem.images.length > 0) {
+          const base64Images = [];
+          for (const imageUrl of newItem.images) {
+            const base64 = await imageUrlToBase64(imageUrl);
+            if (base64) base64Images.push(base64);
+          }
+          newItem.images = base64Images.join('|'); // Join multiple images with pipe separator
+        } else {
+          newItem.images = '';
+        }
+
+        // Handle detailed_location if it's an array
+        if (Array.isArray(newItem.detailed_location)) {
+          newItem.detailed_location = newItem.detailed_location.join('; ');
+        }
+
+        processedData.push(newItem);
+      }
+
+      // Get all unique keys
+      const keys = [...new Set(processedData.flatMap(obj => Object.keys(obj)))];
+      
+      // Create CSV header
+      const header = keys.map(escapeCSV).join(',');
+      
+      // Create CSV rows
+      const rows = processedData.map(item => 
+        keys.map(key => escapeCSV(item[key])).join(',')
+      );
+
+      btn.textContent = 'Download CSV';
+      btn.classList.remove('processing');
+      btn.disabled = false;
+
+      return [header, ...rows].join('\n');
+    }
+
+    async function downloadCSV() {
+      const data = allData[activeProvider] || [];
+      if (data.length === 0) {
+        alert('No data available to export');
+        return;
+      }
+
+      const csv = await convertToCSV(data);
+      const provider = PROVIDERS.find(p => p.id === activeProvider);
+      const filename = provider ? provider.file.replace('.json', '.csv') : 'export.csv';
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      const url = URL.createObjectURL(blob);
+      
+      link.setAttribute('href', url);
+      link.setAttribute('download', filename);
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
   </script>
 </body>
 </html>
