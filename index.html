@@ -260,8 +260,7 @@
     }
     .json-copy-btn:hover, .csv-download-btn:hover { background: #334155; }
     .json-copy-btn.copied { border-color: #22c55e; color: #22c55e; }
-    .csv-download-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-    .csv-download-btn.processing { border-color: #fbbf24; color: #fbbf24; }
+
 
     .json-content {
       flex: 1;
@@ -563,43 +562,7 @@
 
     loadAll();
 
-    // CSV conversion with base64 images
-    async function imageUrlToBase64(url) {
-      try {
-        // Try direct fetch first
-        let response = await fetch(url);
-        
-        // If CORS error, try with CORS proxy
-        if (!response.ok) {
-          throw new Error('Direct fetch failed');
-        }
-        
-        const blob = await response.blob();
-        return new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onloadend = () => resolve(reader.result);
-          reader.onerror = reject;
-          reader.readAsDataURL(blob);
-        });
-      } catch (error) {
-        // Try with CORS proxy as fallback
-        try {
-          const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(url);
-          const response = await fetch(proxyUrl);
-          const blob = await response.blob();
-          return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.onloadend = () => resolve(reader.result);
-            reader.onerror = reject;
-            reader.readAsDataURL(blob);
-          });
-        } catch (proxyError) {
-          console.warn('Failed to convert image (both direct and proxy):', url, proxyError);
-          return url; // Return original URL as fallback
-        }
-      }
-    }
-
+    // CSV conversion using image links (no base64)
     function escapeCSV(value) {
       if (value === null || value === undefined) return '';
       const str = String(value);
@@ -609,27 +572,15 @@
       return str;
     }
 
-    async function convertToCSV(data) {
+    function convertToCSV(data) {
       if (!data || data.length === 0) return '';
 
-      const btn = document.getElementById('csv-btn');
-      btn.textContent = 'Processing...';
-      btn.classList.add('processing');
-      btn.disabled = true;
-
-      // Process images to base64
-      const processedData = [];
-      for (const item of data) {
+      const processedData = data.map(item => {
         const newItem = { ...item };
-        
-        // Convert images array to base64
-        if (newItem.images && Array.isArray(newItem.images) && newItem.images.length > 0) {
-          const base64Images = [];
-          for (const imageUrl of newItem.images) {
-            const base64 = await imageUrlToBase64(imageUrl);
-            if (base64) base64Images.push(base64);
-          }
-          newItem.images = base64Images.join('|'); // Join multiple images with pipe separator
+
+        // Keep image URLs as-is, join multiples with pipe
+        if (Array.isArray(newItem.images) && newItem.images.length > 0) {
+          newItem.images = newItem.images.join('|');
         } else {
           newItem.images = '';
         }
@@ -639,35 +590,31 @@
           newItem.detailed_location = newItem.detailed_location.join('; ');
         }
 
-        processedData.push(newItem);
-      }
+        return newItem;
+      });
 
       // Get all unique keys
       const keys = [...new Set(processedData.flatMap(obj => Object.keys(obj)))];
-      
+
       // Create CSV header
       const header = keys.map(escapeCSV).join(',');
-      
+
       // Create CSV rows
-      const rows = processedData.map(item => 
+      const rows = processedData.map(item =>
         keys.map(key => escapeCSV(item[key])).join(',')
       );
-
-      btn.textContent = 'Download CSV';
-      btn.classList.remove('processing');
-      btn.disabled = false;
 
       return [header, ...rows].join('\n');
     }
 
-    async function downloadCSV() {
+    function downloadCSV() {
       const data = allData[activeProvider] || [];
       if (data.length === 0) {
         alert('No data available to export');
         return;
       }
 
-      const csv = await convertToCSV(data);
+      const csv = convertToCSV(data);
       const provider = PROVIDERS.find(p => p.id === activeProvider);
       const filename = provider ? provider.file.replace('.json', '.csv') : 'export.csv';
 
