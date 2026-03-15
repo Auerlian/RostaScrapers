@@ -1,0 +1,528 @@
+ROSTA Website Style Guide
+Source basis: visual analysis of the provided homepage screenshot
+Version: 1.0
+
+==================================================
+1. BRAND IMPRESSION
+==================================================
+
+ROSTA presents as a modern, confident, urban-lifestyle brand with a slightly premium and editorial feel. The design is minimal, bold, and focused. It uses a very small number of visual ingredients, but each one is strong and intentional.
+
+Primary personality traits:
+- Bold
+- Curated
+- Modern
+- Confident
+- Slightly premium
+- Social / lifestyle oriented
+- Clean and launch-focused
+
+This is not a busy marketplace look. It feels more like a polished launch brand or premium consumer app landing page.
+
+Design keywords:
+- big type
+- soft rounded shapes
+- strong contrast
+- minimal clutter
+- warm modern colour story
+- simple, punchy messaging
+- centered composition
+
+==================================================
+2. CORE VISUAL PRINCIPLES
+==================================================
+
+2.1 Simplicity over density
+Use very few elements on screen at one time. The page should feel spacious, not packed.
+
+2.2 Bold focal point
+Each screen or section should have one obvious focal point, usually a large headline or a strong CTA block.
+
+2.3 Rounded softness
+Corners are consistently rounded. Inputs, pills, cards, containers, and buttons should all feel soft and friendly rather than sharp or corporate.
+
+2.4 Strong contrast
+The design relies on high contrast between a dark, rich background and light content. Accent colour is used sparingly but clearly.
+
+2.5 Centered hero-first composition
+The visual language strongly favors centered layouts, especially in hero sections. Elements stack vertically with clear spacing.
+
+2.6 Premium restraint
+There are no noisy gradients, no excessive shadows, and no overdesigned decoration. The style feels intentional and mature.
+
+==================================================
+3. COLOUR SYSTEM
+==================================================
+
+The screenshot suggests a small, controlled palette.
+
+Primary background:
+- Deep burgundy / plum-wine tone
+- Approximate reference: #4B0D1E to #551022 range
+- Use as the dominant brand surface
+
+Primary text on dark:
+- Warm off-white / soft cream
+- Approximate reference: #F4F0EC
+- Avoid pure bright white when possible; slightly softened white feels more premium
+
+Secondary text:
+- Soft muted off-white / light greyed cream
+- Approximate reference: #D8D1CC to #CFC7C2
+- Use for supporting lines and input placeholder text
+
+Accent:
+- Yellow-green / chartreuse-olive CTA colour
+- Approximate reference: #BCC43A to #C2C83C
+- Use mainly for primary action states
+
+Neutral light surface:
+- Off-white / light stone for input fields or light UI surfaces
+- Approximate reference: #E8E4E1 to #F0ECE8
+
+Stroke / border tone:
+- Light neutral grey-brown or soft cream linework
+- Approximate reference: #C9C0BA or #B8ADA7 depending on contrast needs
+
+Suggested palette for implementation:
+- brand-bg: #531022
+- brand-bg-alt: #48101E
+- text-primary: #F4F0EC
+- text-secondary: #D6D0CB
+- surface-light: #ECE7E3
+- border-soft: #BDAFA8
+- accent-primary: #BCC43E
+- accent-primary-hover: #AEB734
+- accent-primary-active: #9FA82E
+
+Colour usage rules:
+- The dark burgundy should dominate the experience
+- Accent colour should be used intentionally, not everywhere
+- Use light surfaces only where needed for contrast, such as input shells
+- Avoid introducing bright blues, harsh reds, or many extra colours
+- Keep the palette narrow and brand-consistent
+
+==================================================
+4. TYPOGRAPHY
+==================================================
+
+The typography style appears to be a bold geometric or grotesk sans-serif with strong friendliness and readability. It feels modern and slightly playful because of the weight and proportions.
+
+Type personality:
+- bold
+- rounded / approachable
+- high readability
+- modern sans-serif
+- not elegant serif
+- not condensed techno
+- not highly decorative
+
+Likely characteristics to match:
+- heavy headline weights
+- medium or regular supporting text
+- rounded or slightly soft letterforms
+- wide, clean counters
+- good performance at large sizes
+
+Recommended category for matching:
+- bold contemporary sans-serif
+- something in the spirit of modern grotesk / geometric UI fonts
+
+Examples of acceptable directions for a developer to explore:
+- Inter with very heavy weights
+- Satoshi
+- General Sans
+- Circular-like alternatives
+- Manrope for some UI elements
+- A rounded grotesk if available
+
+Do not treat the font recommendation as an exact identification. The goal is style matching, not exact font forensics.
+
+Typography hierarchy:
+
+4.1 Logo / top brand label
+- uppercase
+- bold
+- compact
+- small relative to hero
+- centered at top
+
+4.2 Badge text
+- small
+- medium weight
+- highly legible
+- often sentence case
+
+4.3 Hero headline
+- very large
+- extra bold / black
+- multiline
+- centered
+- very tight visual prominence
+- likely line-height around 0.9 to 1.0
+- should dominate the screen
+
+4.4 Supporting copy
+- medium size
+- regular or medium weight
+- centered
+- short, punchy sentence
+
+4.5 Form / button text
+- input text: medium weight, neutral
+- CTA text: bold, uppercase or strong emphasis
+
+Suggested desktop sizing:
+- logo: 20px to 28px
+- badge: 14px to 18px
+- hero headline: 72px to 110px depending on container
+- support copy: 24px to 32px
+- form text: 18px to 22px
+- small footer/helper text: 16px to 22px
+
+Suggested mobile adaptation:
+- hero headline should scale down significantly but remain dominant
+- keep forms large and tap-friendly
+- preserve centered stacking and generous breathing room
+
+==================================================
+5. LAYOUT SYSTEM
+==================================================
+
+5.1 Overall structure
+The screenshot shows a single large rounded container sitting inside a light page background. This suggests a framed hero section rather than edge-to-edge content.
+
+Structure:
+- outer light neutral page background
+- inner large rounded brand panel
+- centered content within the panel
+- generous vertical padding
+- content block positioned around the center
+
+5.2 Container style
+Main hero container:
+- very large border radius
+- likely between 24px and 40px
+- fills most of viewport width with visible margin around it
+- should feel like a polished stage or canvas
+
+5.3 Alignment
+- mostly center aligned
+- logo centered
+- badge centered
+- headline centered
+- body text centered
+- form centered
+- footer/helper line centered
+
+5.4 Spacing philosophy
+Spacing is generous and clean. Each element has clear separation.
+
+Suggested vertical rhythm:
+- logo to badge: medium gap
+- badge to headline: large gap
+- headline to support line: medium-large gap
+- support line to form: medium gap
+- form to bottom helper line: medium-large gap
+
+Avoid cramped layouts. Every component should feel like it has air around it.
+
+==================================================
+6. SHAPE LANGUAGE
+==================================================
+
+This design strongly uses pill and rounded rectangle forms.
+
+Shape rules:
+- cards and main panels: large rounded corners
+- pills and tags: fully rounded capsule shapes
+- buttons: pill or very rounded rectangle
+- inputs: pill or strongly rounded shell
+- no sharp-cornered boxes unless deeply justified
+
+Corner radius guidance:
+- panel radius: 24px to 40px
+- input/button radius: 999px pill style
+- small badge radius: 999px pill style
+
+The style should feel soft and tactile, not rigid.
+
+==================================================
+7. COMPONENT STYLE
+==================================================
+
+7.1 Logo
+- centered at top
+- simple wordmark
+- white / off-white on dark background
+- clean and bold
+- not ornate
+
+7.2 Announcement badge
+Example: "Coming April 2026"
+
+Characteristics:
+- small pill
+- subtle border stroke
+- transparent or dark background
+- light text
+- optional small icon on left
+- feels like a status chip
+
+Implementation notes:
+- thin border
+- compact padding
+- moderate contrast
+- refined, understated
+
+7.3 Hero headline
+Example style:
+- oversized
+- stacked across multiple lines
+- very bold
+- center aligned
+- powerful and direct
+
+Copywriting style:
+- short
+- conversational
+- benefit-led
+- no jargon
+- emotionally immediate
+
+7.4 Supporting text
+Example style:
+- short and punchy
+- one sentence fragment
+- adds clarity without becoming a paragraph
+
+7.5 Email capture form
+This is one of the most defining elements in the design.
+
+Characteristics:
+- pill-shaped outer shell
+- light background
+- inside it, a distinct CTA segment on the right
+- form feels integrated, not like separate disconnected controls
+- slight border or shadow edge may be present
+
+Recommended structure:
+- outer form wrapper with pill shape
+- left side: email input area
+- right side: embedded CTA button block
+
+Input styling:
+- soft light surface
+- muted placeholder colour
+- no harsh border
+- generous padding
+- easy to scan
+
+Button styling:
+- olive/chartreuse accent fill
+- dark text for contrast
+- bold label
+- pill shape matching shell
+- integrated into the input rather than floating separately
+
+7.6 Bottom helper / launch text
+Example: "Launching in London & surrounding areas"
+
+Characteristics:
+- centered
+- small to medium size
+- light text
+- calm and informative
+- reinforces locality and launch focus
+
+==================================================
+8. BORDERS, SHADOWS, AND EFFECTS
+==================================================
+
+8.1 Borders
+Borders are subtle and mostly used to define pills, chips, and input shells.
+
+Rules:
+- use thin borders
+- prefer soft neutral strokes over harsh black or white
+- keep borders understated
+
+8.2 Shadows
+Very restrained. If used at all, they should be soft and minimal.
+
+Rules:
+- avoid dramatic drop shadows
+- use shadows only to gently separate light surfaces from dark background
+- shadow should support depth, not become decoration
+
+8.3 Effects
+The page appears largely flat with light polish.
+
+Rules:
+- avoid glossy skeuomorphism
+- avoid heavy glassmorphism
+- avoid neon glows
+- subtle depth is okay
+- focus on shape, contrast, and spacing instead
+
+==================================================
+9. COPY STYLE / TONE OF VOICE
+==================================================
+
+The language is minimal and punchy.
+
+Tone characteristics:
+- conversational
+- direct
+- optimistic
+- confident
+- useful without sounding technical
+- lifestyle-oriented rather than operational
+
+Copy rules:
+- keep headlines short
+- use plain English
+- focus on user pain and emotional relief
+- avoid corporate filler
+- avoid overly clever wordplay unless it stays very clear
+- favor "big idea" statements over detailed explanations
+
+Examples of the style:
+- "Stop searching everywhere for things to do"
+- "Less tabs. More plans"
+
+This style works because it is:
+- specific
+- relatable
+- low-friction
+- easy to remember
+
+==================================================
+10. INTERACTION STYLE
+==================================================
+
+The screenshot is static, but the style suggests interaction should feel smooth, modern, and restrained.
+
+Recommended interaction behaviour:
+- subtle hover transitions
+- soft scaling or colour shifts on CTA
+- minimal motion
+- gentle fades or upward reveals
+- no bouncy, gimmicky animation
+
+Interaction guidelines:
+- buttons should respond with slight darkening/lightening
+- focus states should be clear but elegant
+- form interactions should feel polished and frictionless
+- transitions around 150ms to 250ms
+- easing should be smooth and modern, not snappy/aggressive
+
+==================================================
+11. RESPONSIVE DESIGN BEHAVIOUR
+==================================================
+
+On smaller screens:
+- preserve centered stack
+- keep the headline large but wrap naturally
+- maintain pill-shaped controls where practical
+- reduce horizontal whitespace, but keep generous vertical breathing room
+- the email form may stack if needed, but should remain visually cohesive
+
+Mobile priorities:
+- maintain strong hero impact
+- preserve contrast and readability
+- keep tap targets large
+- avoid making the design feel cramped
+
+==================================================
+12. WHAT TO REPEAT ACROSS OTHER PRODUCTS
+==================================================
+
+To create other products in the same general style, consistently reuse these features:
+
+- deep burgundy primary backgrounds
+- soft cream text instead of cold pure white
+- one olive/chartreuse accent colour for major actions
+- oversized bold centered headlines
+- rounded panels and pill controls
+- minimal number of components per screen
+- strong whitespace
+- short, punchy, user-friendly copy
+- premium but friendly restraint
+- centered landing-page style composition
+
+This style should feel branded through consistency, not complexity.
+
+==================================================
+13. WHAT TO AVOID
+==================================================
+
+Avoid the following if trying to stay on-brand:
+
+- sharp corners
+- bright blue SaaS-style colour palettes
+- too many accent colours
+- heavy gradients
+- cluttered dashboards
+- dense text blocks
+- overly technical visuals
+- corporate enterprise styling
+- tiny buttons or cramped forms
+- decorative illustrations that break the premium minimal feel
+- noisy iconography
+- dark pure black backgrounds instead of rich burgundy tones
+
+==================================================
+14. UI BUILD GUIDANCE FOR DEVELOPERS
+==================================================
+
+Recommended implementation principles:
+- Use a max-width container with a light page background and a dark rounded hero surface
+- Use a type scale with very heavy display sizes
+- Define border-radius tokens for "panel", "large pill", and "small pill"
+- Define a very small palette and reuse it consistently
+- Keep component count low per page section
+- Build a reusable hero CTA form component with integrated input + button
+- Use spacing tokens that favor generous separation
+- Center align major landing page sections by default
+
+Suggested design tokens:
+
+Spacing
+- xs: 8px
+- sm: 12px
+- md: 16px
+- lg: 24px
+- xl: 32px
+- 2xl: 48px
+- 3xl: 64px
+- 4xl: 96px
+
+Radius
+- sm: 12px
+- md: 18px
+- lg: 28px
+- xl: 36px
+- pill: 999px
+
+Type weights
+- regular: 400
+- medium: 500
+- semibold: 600
+- bold: 700
+- extrabold: 800
+- black: 900
+
+==================================================
+15. EXAMPLE STYLE SUMMARY FOR HANDOFF
+==================================================
+
+If a developer needs a short summary, use this:
+
+"Build the interface with a rich burgundy background, warm off-white text, and a single olive/chartreuse accent for primary actions. Use oversized extra-bold sans-serif headlines, generous spacing, and highly rounded pill-shaped inputs and buttons. Keep layouts centered, minimal, and premium. The tone should feel modern, confident, and lifestyle-focused rather than corporate or technical."
+
+==================================================
+16. CONFIDENCE / LIMITATION NOTE
+==================================================
+
+This guide is based on the provided screenshot, not a full inspection of the live site's codebase or all page states. It should be treated as a visual style-direction guide, not a pixel-perfect reverse-engineered design specification. Exact font family, exact hex values, and exact spacing values may differ slightly in the original implementation.

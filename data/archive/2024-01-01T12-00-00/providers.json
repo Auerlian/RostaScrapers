@@ -1,0 +1,15 @@
+{
+  "provider-test": {
+    "provider_id": "provider-test",
+    "provider_name": "Test",
+    "provider_slug": "test",
+    "provider_website": null,
+    "provider_contact_email": null,
+    "source_name": "Test",
+    "source_base_url": "https://test.com",
+    "status": "active",
+    "first_seen_at": null,
+    "last_seen_at": null,
+    "metadata": {}
+  }
+}

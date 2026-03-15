@@ -1,0 +1,2 @@
+location_id,provider_id,provider_name,location_name,formatted_address,address_line_1,address_line_2,city,region,postcode,country,latitude,longitude,geocode_status,geocode_precision,geocode_provider,geocoded_at,venue_phone,venue_email,venue_website,event_count,active_event_count,event_names,active_event_ids,status,first_seen_at,last_seen_at
+location-test-1,provider-test,Test Provider,,"123 Test St, London, UK",,,,,,UK,51.5074,-0.1278,success,rooftop,mapbox,2026-03-15T01:38:44Z,,,,0,0,,,active,2026-03-15T01:38:44Z,2026-03-15T01:38:44Z

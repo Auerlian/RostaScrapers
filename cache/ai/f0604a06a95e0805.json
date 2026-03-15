@@ -1,0 +1,30 @@
+{
+  "description_ai": "Master authentic Italian pasta-making techniques in this immersive hands-on class. Perfect for beginners.",
+  "summary_short": "Hands-on pasta making masterclass",
+  "summary_medium": "Learn traditional Italian pasta techniques with expert chefs in this beginner-friendly cooking experience.",
+  "tags": [
+    "hands-on",
+    "italian",
+    "cooking",
+    "beginner-friendly"
+  ],
+  "occasion_tags": [
+    "date-night",
+    "team-building"
+  ],
+  "skills_required": [],
+  "skills_created": [
+    "pasta-making",
+    "italian-cooking"
+  ],
+  "age_min": 18,
+  "age_max": null,
+  "audience": "adults",
+  "family_friendly": false,
+  "beginner_friendly": true,
+  "duration_minutes": 180,
+  "metadata": {},
+  "cached_at": "2026-03-15T01:02:35.597214",
+  "prompt_version": "v1",
+  "model": "gpt-4o-mini"
+}

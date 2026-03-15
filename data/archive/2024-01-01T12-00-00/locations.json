@@ -1,0 +1,29 @@
+{
+  "location-test-123": {
+    "location_id": "location-test-123",
+    "provider_id": "provider-test",
+    "provider_name": "Test Provider",
+    "location_name": "Test Venue",
+    "address_line_1": "123 Test St",
+    "address_line_2": null,
+    "city": "London",
+    "region": null,
+    "postcode": "SW1A 1AA",
+    "country": "UK",
+    "formatted_address": "123 Test St, London, UK",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "geocode_provider": null,
+    "geocode_status": "success",
+    "geocode_precision": null,
+    "geocoded_at": null,
+    "venue_phone": null,
+    "venue_email": null,
+    "venue_website": null,
+    "status": "active",
+    "first_seen_at": "2024-01-01T12:00:00",
+    "last_seen_at": "2024-01-02T12:00:00",
+    "deleted_at": null,
+    "address_hash": null
+  }
+}

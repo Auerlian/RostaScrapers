@@ -1,0 +1,10 @@
+{
+  "latitude": 51.5074,
+  "longitude": -0.1278,
+  "status": "success",
+  "precision": "rooftop",
+  "metadata": {
+    "provider": "mapbox"
+  },
+  "cached_at": "2026-03-15T00:31:25.204792"
+}
