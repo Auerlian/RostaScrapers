@@ -96,37 +96,49 @@
     ]
   },
   {
-    "experience_name": "CAKE BAKING AND DECORATING WORKSHOP — Individual Ticket",
-    "experience_description": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | One ticket for one person for the Sourdough, Baguette & fougasse Workshop",
+    "experience_name": "CAKE BAKING AND DECORATING WORKSHOP — Mother's Day Duo Ticket",
+    "experience_description": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for your mum and you for the Mother's Day Mini French Tart Workshop, including a complimentary glass of wine or bubble for all mums!",
+    "experience_provider_name": "Comptoir Bakery",
+    "detailed_location": "Comptoir Bakery School and Workshop, 96 Druid Street, London, SE1 2HQ",
+    "email_contact": "enquiries@comptoirbakery.co.uk",
+    "price": "£210",
+    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-sqwwt-20260315100000",
+    "images": [
+      "https://www.comptoirbakery.co.uk/cdn/shop/files/f892877a-b127-48f4-945f-82ee25711bec.jpg?crop=center&height=1000&v=1773323604&width=1000"
+    ]
+  },
+  {
+    "experience_name": "CAKE BAKING AND DECORATING WORKSHOP — Individual ticket",
+    "experience_description": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | One ticket for one person for the Mother's Day Mini French Tart Workshop",
     "experience_provider_name": "Comptoir Bakery",
     "detailed_location": "Comptoir Bakery School and Workshop, 96 Druid Street, London, SE1 2HQ",
     "email_contact": "enquiries@comptoirbakery.co.uk",
     "price": "£105",
-    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-sqtra-20260314100000",
+    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-sqwwt-20260315100000",
     "images": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/f892877a-b127-48f4-945f-82ee25711bec.jpg?crop=center&height=1000&v=1773323604&width=1000"
     ]
   },
   {
     "experience_name": "CAKE BAKING AND DECORATING WORKSHOP — Ticket Duo with two glasses of wine",
-    "experience_description": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons, with two glasses of wine for the Sourdough loaf, Baguette and Fougasse Workshop. The wine list is available on demand.",
+    "experience_description": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons, with two glasses of wine for the Mother's Day Mini French Tart Workshop",
     "experience_provider_name": "Comptoir Bakery",
     "detailed_location": "Comptoir Bakery School and Workshop, 96 Druid Street, London, SE1 2HQ",
     "email_contact": "enquiries@comptoirbakery.co.uk",
     "price": "£228",
-    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-sqtra-20260314100000",
+    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-sqwwt-20260315100000",
     "images": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/f892877a-b127-48f4-945f-82ee25711bec.jpg?crop=center&height=1000&v=1773323604&width=1000"
     ]
   },
   {
     "experience_name": "CAKE BAKING AND DECORATING WORKSHOP — Ticket Duo for celebration",
-    "experience_description": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons for the Sourdough loaf, Baguette and Fougasse Workshop, with one of our celebration loaf cake with candles. The list of our cakes is available on demand.",
+    "experience_description": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons for the Mother's Day Mini French Tarts Workshop, with one of our cake with candles for celebrations.The list of our cakes is available on demand.",
     "experience_provider_name": "Comptoir Bakery",
     "detailed_location": "Comptoir Bakery School and Workshop, 96 Druid Street, London, SE1 2HQ",
     "email_contact": "enquiries@comptoirbakery.co.uk",
     "price": "£240",
-    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-sqtra-20260314100000",
+    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-sqwwt-20260315100000",
     "images": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/f892877a-b127-48f4-945f-82ee25711bec.jpg?crop=center&height=1000&v=1773323604&width=1000"
     ]
@@ -138,7 +150,7 @@
     "detailed_location": "Comptoir Bakery School and Workshop, 96 Druid Street, London, SE1 2HQ",
     "email_contact": "enquiries@comptoirbakery.co.uk",
     "price": "£105",
-    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-scfc3-20260314143000",
+    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-scy6l-20260321100000",
     "images": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-125.jpg?crop=center&height=1000&v=1743080149&width=1000"
     ]
@@ -150,7 +162,7 @@
     "detailed_location": "Comptoir Bakery School and Workshop, 96 Druid Street, London, SE1 2HQ",
     "email_contact": "enquiries@comptoirbakery.co.uk",
     "price": "£228",
-    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-scfc3-20260314143000",
+    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-scy6l-20260321100000",
     "images": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-125.jpg?crop=center&height=1000&v=1743080149&width=1000"
     ]
@@ -162,7 +174,7 @@
     "detailed_location": "Comptoir Bakery School and Workshop, 96 Druid Street, London, SE1 2HQ",
     "email_contact": "enquiries@comptoirbakery.co.uk",
     "price": "£240",
-    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-scfc3-20260314143000",
+    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-scy6l-20260321100000",
     "images": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-125.jpg?crop=center&height=1000&v=1743080149&width=1000"
     ]
@@ -354,7 +366,7 @@
     "detailed_location": "Comptoir Bakery School and Workshop, 96 Druid Street, London, SE1 2HQ",
     "email_contact": "enquiries@comptoirbakery.co.uk",
     "price": "£105",
-    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-sqtra-20260314100000",
+    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-s2sx6-20260328143000",
     "images": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/IMG_2980.heic?crop=center&height=1000&v=1771604626&width=1000"
     ]
@@ -366,7 +378,7 @@
     "detailed_location": "Comptoir Bakery School and Workshop, 96 Druid Street, London, SE1 2HQ",
     "email_contact": "enquiries@comptoirbakery.co.uk",
     "price": "£228",
-    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-sqtra-20260314100000",
+    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-s2sx6-20260328143000",
     "images": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/IMG_2980.heic?crop=center&height=1000&v=1771604626&width=1000"
     ]
@@ -378,7 +390,7 @@
     "detailed_location": "Comptoir Bakery School and Workshop, 96 Druid Street, London, SE1 2HQ",
     "email_contact": "enquiries@comptoirbakery.co.uk",
     "price": "£240",
-    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-sqtra-20260314100000",
+    "website": "https://bookwhen.com/comptoirbakeryschool/e/ev-s2sx6-20260328143000",
     "images": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/IMG_2980.heic?crop=center&height=1000&v=1771604626&width=1000"
     ]
