@@ -9,115 +9,158 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #f8fafc;
-      --card-bg: #fff;
-      --border: #e2e8f0;
-      --text: #1e293b;
-      --text-muted: #64748b;
-      --text-light: #94a3b8;
-      --accent: #e44d26;
-      --accent-hover: #c7391a;
-      --accent-light: #fff5f2;
-      --json-bg: #0f172a;
-      --json-text: #cbd5e1;
-      --price-bg: #ecfdf5;
-      --price-text: #065f46;
-      --radius: 12px;
+      --brand-bg: #531022;
+      --brand-bg-alt: #48101E;
+      --brand-bg-light: #5D1428;
+      --page-bg: #ECE7E3;
+      --card-bg: #F4F0EC;
+      --surface-light: #ECE7E3;
+      --text-primary: #F4F0EC;
+      --text-secondary: #D6D0CB;
+      --text-dark: #2D1A1F;
+      --text-muted: #A89B95;
+      --border-soft: #BDAFA8;
+      --accent-primary: #BCC43E;
+      --accent-hover: #AEB734;
+      --accent-active: #9FA82E;
+      --accent-light: #E8ECC8;
+      --price-bg: #E8ECC8;
+      --price-text: #5A5E2A;
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --radius-xl: 36px;
+      --radius-pill: 999px;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+      background: var(--page-bg);
+      color: var(--text-primary);
       line-height: 1.5;
       overflow-x: hidden;
     }
 
     /* Header */
     .header {
-      background: var(--card-bg);
-      border-bottom: 1px solid var(--border);
-      padding: 16px 24px;
+      background: var(--brand-bg);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 20px 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
     .header-left { display: flex; align-items: center; gap: 14px; }
     .logo {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 900;
-      letter-spacing: -1px;
-      color: var(--accent);
+      letter-spacing: -0.5px;
+      color: var(--text-primary);
+      text-transform: uppercase;
     }
-    .logo span { color: var(--text); }
-    .header-sub { font-size: 12px; color: var(--text-muted); }
-    .header-meta { display: flex; align-items: center; gap: 12px; }
-    .last-updated { font-size: 11px; color: var(--text-light); }
+    .logo span { color: var(--accent-primary); }
+    .header-sub { 
+      font-size: 13px; 
+      color: var(--text-secondary); 
+      font-weight: 500;
+    }
+    .header-meta { display: flex; align-items: center; gap: 16px; }
+    .last-updated { 
+      font-size: 12px; 
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
     .refresh-link {
-      font-size: 11px;
-      color: var(--accent);
+      font-size: 12px;
+      color: var(--accent-primary);
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(188, 196, 62, 0.3);
+      transition: all 0.2s;
     }
-    .refresh-link:hover { text-decoration: underline; }
+    .refresh-link:hover { 
+      background: rgba(188, 196, 62, 0.15);
+      border-color: var(--accent-primary);
+    }
 
     /* Provider Tabs */
     .tabs {
       display: flex;
-      gap: 4px;
-      background: #f1f5f9;
-      padding: 4px;
-      border-radius: 10px;
+      gap: 6px;
+      background: rgba(0,0,0,0.2);
+      padding: 6px;
+      border-radius: var(--radius-pill);
     }
     .tab {
-      padding: 8px 18px;
+      padding: 10px 22px;
       border: none;
       background: transparent;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-muted);
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-secondary);
       cursor: pointer;
-      transition: all 0.15s;
+      transition: all 0.2s;
       white-space: nowrap;
     }
-    .tab:hover { color: var(--text); background: rgba(255,255,255,0.6); }
-    .tab.active { background: var(--card-bg); color: var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .tab:hover { 
+      color: var(--text-primary); 
+      background: rgba(255,255,255,0.08); 
+    }
+    .tab.active { 
+      background: var(--accent-primary); 
+      color: var(--brand-bg); 
+      box-shadow: 0 2px 8px rgba(188, 196, 62, 0.3);
+    }
 
     /* Main Layout */
     .main {
       display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 20px;
+      grid-template-columns: 1fr 440px;
+      gap: 24px;
       max-width: 1600px;
       margin: 0 auto;
-      padding: 20px 24px;
-      height: calc(100vh - 68px);
+      padding: 24px 32px;
+      height: calc(100vh - 80px);
     }
 
     /* Grid Panel */
     .grid-panel {
       overflow-y: auto;
       padding-right: 8px;
+      background: var(--brand-bg);
+      border-radius: var(--radius-lg);
+      padding: 24px;
     }
-    .grid-panel::-webkit-scrollbar { width: 6px; }
-    .grid-panel::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    .grid-panel::-webkit-scrollbar { width: 8px; }
+    .grid-panel::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 4px; }
+    .grid-panel::-webkit-scrollbar-thumb { 
+      background: rgba(188, 196, 62, 0.4); 
+      border-radius: 4px; 
+    }
+    .grid-panel::-webkit-scrollbar-thumb:hover { 
+      background: rgba(188, 196, 62, 0.6); 
+    }
 
     .count-badge {
       display: inline-block;
-      background: var(--accent-light);
-      color: var(--accent);
-      font-size: 12px;
+      background: rgba(188, 196, 62, 0.15);
+      color: var(--accent-primary);
+      font-size: 13px;
       font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 20px;
-      margin-bottom: 16px;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 20px;
+      border: 1px solid rgba(188, 196, 62, 0.3);
     }
 
     .grid {
@@ -129,162 +172,239 @@
     /* Experience Card */
     .card {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: box-shadow 0.2s;
+      transition: all 0.2s;
     }
-    .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .card:hover { 
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      transform: translateY(-2px);
+    }
 
     .card-img {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
-      background: #f1f5f9;
+      background: var(--surface-light);
       display: block;
     }
     .card-img-placeholder {
       width: 100%;
-      height: 180px;
-      background: #f1f5f9;
+      height: 200px;
+      background: var(--surface-light);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--text-light);
-      font-size: 13px;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    .card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+    .card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
     .card-provider {
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--accent);
-      margin-bottom: 4px;
+      letter-spacing: 1px;
+      color: var(--accent-primary);
+      margin-bottom: 6px;
     }
-    .card-name { font-size: 16px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+    .card-name { 
+      font-size: 18px; 
+      font-weight: 800; 
+      margin-bottom: 10px; 
+      line-height: 1.3;
+      color: var(--text-dark);
+    }
     .card-desc {
-      font-size: 13px;
+      font-size: 14px;
       color: var(--text-muted);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       flex: 1;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      line-height: 1.5;
     }
 
     .card-price {
       display: inline-block;
       background: var(--price-bg);
       color: var(--price-text);
-      font-size: 14px;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 6px;
-      margin-bottom: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 14px;
     }
-    .card-price.no-price { background: #fef3c7; color: #92400e; }
+    .card-price.no-price { 
+      background: rgba(188, 196, 62, 0.1); 
+      color: var(--text-muted);
+    }
 
-    .card-meta { border-top: 1px solid var(--border); padding-top: 12px; margin-top: auto; }
+    .card-meta { 
+      border-top: 1px solid var(--border-soft); 
+      padding-top: 14px; 
+      margin-top: auto; 
+    }
     .card-meta-row {
       display: flex;
       align-items: flex-start;
       gap: 8px;
-      font-size: 12px;
+      font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      font-weight: 500;
     }
     .card-meta-row svg { flex-shrink: 0; margin-top: 2px; }
-    .card-meta-row a { color: var(--accent); text-decoration: none; }
-    .card-meta-row a:hover { text-decoration: underline; }
-    .card-location-extra { font-size: 11px; color: var(--text-light); }
-
-    .card-links { display: flex; gap: 12px; margin-top: 8px; }
-    .card-link {
-      font-size: 12px;
+    .card-meta-row a { 
+      color: var(--brand-bg); 
+      text-decoration: none;
       font-weight: 600;
-      color: var(--accent);
+    }
+    .card-meta-row a:hover { 
+      color: var(--accent-active);
+    }
+    .card-location-extra { 
+      font-size: 12px; 
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .card-links { display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+    .card-link {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--brand-bg);
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-soft);
+      transition: all 0.2s;
     }
-    .card-link:hover { text-decoration: underline; }
+    .card-link:hover { 
+      background: var(--accent-primary);
+      border-color: var(--accent-primary);
+      color: var(--brand-bg);
+    }
 
     /* Footer */
     .footer {
       text-align: center;
-      padding: 24px;
-      font-size: 12px;
-      color: var(--text-light);
+      padding: 32px;
+      font-size: 13px;
+      color: var(--text-muted);
+      background: var(--brand-bg);
+      font-weight: 500;
     }
-    .footer a { color: var(--accent); text-decoration: none; }
-    .footer a:hover { text-decoration: underline; }
+    .footer a { 
+      color: var(--accent-primary); 
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .footer a:hover { 
+      text-decoration: underline;
+    }
 
     /* JSON Panel */
     .json-panel {
-      background: var(--json-bg);
-      border-radius: var(--radius);
-      border: 1px solid #1e293b;
+      background: var(--brand-bg-alt);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255,255,255,0.1);
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     }
     .json-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 12px 16px;
-      border-bottom: 1px solid #1e293b;
-      background: #1e293b;
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      background: var(--brand-bg);
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 12px;
     }
-    .json-header-title { font-size: 13px; font-weight: 600; color: var(--json-text); }
-    .json-header-actions { display: flex; gap: 8px; }
+    .json-header-title { 
+      font-size: 14px; 
+      font-weight: 800; 
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .json-header-actions { display: flex; gap: 8px; flex-wrap: wrap; }
     .json-copy-btn, .csv-download-btn {
-      padding: 4px 12px;
-      border: 1px solid #334155;
-      background: #0f172a;
-      color: var(--json-text);
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(0,0,0,0.2);
+      color: var(--text-primary);
+      border-radius: var(--radius-pill);
+      font-size: 11px;
+      font-weight: 700;
       cursor: pointer;
-      transition: all 0.15s;
+      transition: all 0.2s;
+      white-space: nowrap;
     }
-    .json-copy-btn:hover, .csv-download-btn:hover { background: #334155; }
-    .json-copy-btn.copied { border-color: #22c55e; color: #22c55e; }
+    .json-copy-btn:hover, .csv-download-btn:hover { 
+      background: var(--accent-primary);
+      color: var(--brand-bg);
+      border-color: var(--accent-primary);
+    }
+    .json-copy-btn.copied { 
+      border-color: #22c55e; 
+      background: #22c55e;
+      color: var(--brand-bg);
+    }
+    .csv-download-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .csv-download-btn:disabled:hover {
+      background: rgba(0,0,0,0.2);
+      color: var(--text-primary);
+      border-color: rgba(255,255,255,0.2);
+    }
 
 
     .json-content {
       flex: 1;
       overflow: auto;
-      padding: 16px;
+      padding: 20px;
     }
-    .json-content::-webkit-scrollbar { width: 6px; }
-    .json-content::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    .json-content::-webkit-scrollbar { width: 8px; }
+    .json-content::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 4px; }
+    .json-content::-webkit-scrollbar-thumb { 
+      background: rgba(188, 196, 62, 0.4); 
+      border-radius: 4px; 
+    }
+    .json-content::-webkit-scrollbar-thumb:hover { 
+      background: rgba(188, 196, 62, 0.6); 
+    }
     .json-content pre {
       font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
       font-size: 12px;
-      line-height: 1.6;
-      color: var(--json-text);
+      line-height: 1.7;
+      color: var(--text-secondary);
       white-space: pre-wrap;
       word-break: break-all;
       overflow-wrap: break-word;
     }
 
     /* JSON syntax highlighting */
-    .json-key { color: #7dd3fc; }
-    .json-string { color: #86efac; }
-    .json-number { color: #fbbf24; }
-    .json-null { color: #f87171; }
-    .json-bracket { color: #94a3b8; }
+    .json-key { color: var(--accent-primary); }
+    .json-string { color: #A8D5BA; }
+    .json-number { color: #F4C095; }
+    .json-null { color: #E89BA7; }
+    .json-bracket { color: var(--text-secondary); }
 
     /* Loading */
     .loading {
@@ -292,16 +412,17 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 60px;
-      color: var(--text-muted);
+      padding: 80px;
+      color: var(--text-secondary);
     }
     .spinner {
-      width: 32px; height: 32px;
-      border: 3px solid var(--border);
-      border-top-color: var(--accent);
+      width: 40px; 
+      height: 40px;
+      border: 3px solid rgba(255,255,255,0.1);
+      border-top-color: var(--accent-primary);
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -310,7 +431,7 @@
       .main {
         grid-template-columns: 1fr;
         height: auto;
-        padding: 16px;
+        padding: 20px;
       }
       /* JSON panel first on mobile */
       .json-panel { order: -1; height: 400px; }
@@ -319,13 +440,13 @@
     @media (max-width: 640px) {
       .header {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
         align-items: flex-start;
-        padding: 12px 16px;
+        padding: 16px 20px;
       }
       .header-meta {
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 10px;
         width: 100%;
       }
       .tabs {
@@ -333,15 +454,30 @@
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
       }
-      .tab { padding: 6px 12px; font-size: 12px; }
-      .main { padding: 12px; gap: 12px; }
-      .json-panel { height: 300px; }
+      .tab { padding: 8px 16px; font-size: 13px; }
+      .main { padding: 16px; gap: 16px; }
+      .json-panel { height: 320px; }
+      .json-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .json-header-actions {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .csv-download-btn, .json-copy-btn {
+        font-size: 10px;
+        padding: 6px 10px;
+      }
       .grid {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 14px;
       }
-      .card-img, .card-img-placeholder { height: 150px; }
-      .footer { padding: 16px; }
+      .card-img, .card-img-placeholder { height: 160px; }
+      .footer { padding: 20px; }
+      .logo { font-size: 24px; }
+      .header-sub { font-size: 12px; }
     }
   </style>
 </head>
@@ -372,7 +508,10 @@
       <div class="json-header">
         <span class="json-header-title" id="json-title">JSON Output</span>
         <div class="json-header-actions">
-          <button class="csv-download-btn" id="csv-btn" onclick="downloadCSV()">Download CSV</button>
+          <button class="csv-download-btn" id="events-csv-btn" onclick="downloadPipelineCSV('events')" title="Download normalized events from pipeline (templates + occurrences)">📊 Events CSV</button>
+          <button class="csv-download-btn" id="locations-csv-btn" onclick="downloadPipelineCSV('locations')" title="Download geocoded locations with coordinates for mapping">📍 Locations CSV</button>
+          <button class="csv-download-btn" id="sample-csv-btn" onclick="downloadPipelineCSV('events_sample')" title="Download sample events CSV (smaller file for testing)">📋 Sample CSV</button>
+          <button class="csv-download-btn" id="csv-btn" onclick="downloadCSV()" title="Convert current JSON view to CSV (legacy format)">Legacy CSV</button>
           <button class="json-copy-btn" id="copy-btn" onclick="copyJson()">Copy JSON</button>
         </div>
       </div>
@@ -562,7 +701,46 @@
 
     loadAll();
 
-    // CSV conversion using image links (no base64)
+    // Download pipeline-generated CSV files
+    function downloadPipelineCSV(type) {
+      let filename;
+      if (type === 'events') {
+        filename = 'events.csv';
+      } else if (type === 'locations') {
+        filename = 'locations.csv';
+      } else if (type === 'events_sample') {
+        filename = 'events_sample.csv';
+      }
+      
+      const filepath = 'exports/' + filename;
+      
+      // Check if file exists by attempting to fetch it
+      fetch(filepath)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('File not found');
+          }
+          return response.blob();
+        })
+        .then(blob => {
+          const link = document.createElement('a');
+          const url = URL.createObjectURL(blob);
+          
+          link.setAttribute('href', url);
+          link.setAttribute('download', filename);
+          link.style.visibility = 'hidden';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+        })
+        .catch(error => {
+          alert('Pipeline CSV not found. Please run the pipeline first:\n\npython run_pipeline.py');
+          console.error('Failed to download ' + filename + ':', error);
+        });
+    }
+
+    // CSV conversion using image links (no base64) - for legacy JSON format
     function escapeCSV(value) {
       if (value === null || value === undefined) return '';
       const str = String(value);
