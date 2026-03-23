@@ -730,7 +730,9 @@
         filename = 'events_sample.csv';
       }
       
-      const filepath = 'exports/' + filename;
+      // Add cache-busting timestamp to force fresh download
+      const timestamp = new Date().getTime();
+      const filepath = 'exports/' + filename + '?t=' + timestamp;
       
       // Check if file exists by attempting to fetch it
       fetch(filepath)
