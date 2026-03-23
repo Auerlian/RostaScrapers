@@ -14,17 +14,17 @@
     "latitude": null,
     "longitude": null,
     "geocode_provider": null,
-    "geocode_status": "not_geocoded",
+    "geocode_status": "invalid_address",
     "geocode_precision": null,
-    "geocoded_at": null,
+    "geocoded_at": "2026-03-23T00:43:46.051043",
     "venue_phone": null,
     "venue_email": null,
     "venue_website": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.441013+00:00",
-    "last_seen_at": "2026-03-23T00:30:21.059025+00:00",
+    "last_seen_at": "2026-03-23T00:43:47.186333+00:00",
     "deleted_at": null,
-    "address_hash": "690f6e6758a5"
+    "address_hash": "bedfb0cffca8"
   },
   "location-comptoir-bakery-cbbcfaf267c5": {
     "location_id": "location-comptoir-bakery-cbbcfaf267c5",
@@ -41,16 +41,16 @@
     "latitude": null,
     "longitude": null,
     "geocode_provider": null,
-    "geocode_status": "not_geocoded",
+    "geocode_status": "invalid_address",
     "geocode_precision": null,
-    "geocoded_at": null,
+    "geocoded_at": "2026-03-23T00:43:47.185038",
     "venue_phone": null,
     "venue_email": null,
     "venue_website": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.443464+00:00",
-    "last_seen_at": "2026-03-23T00:30:21.059025+00:00",
+    "last_seen_at": "2026-03-23T00:43:47.186333+00:00",
     "deleted_at": null,
-    "address_hash": "ef444f264521"
+    "address_hash": "cbbcfaf267c5"
   }
 }
