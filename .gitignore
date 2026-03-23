@@ -3,3 +3,12 @@ __pycache__/
 .vscode/
 *.pyc
 .DS_Store
+
+# Environment variables (NEVER commit these!)
+.env
+.env.local
+.env.*.local
+
+# API keys and secrets
+secrets.json
+config.local.json

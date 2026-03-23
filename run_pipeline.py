@@ -11,6 +11,13 @@ from pathlib import Path
 
 import click
 
+# Load environment variables from .env file if it exists
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # python-dotenv not installed, skip
+
 from src.pipeline.orchestrator import PipelineOrchestrator
 from src.storage.store import CanonicalStore
 
@@ -288,10 +295,12 @@ def validate():
         else:
             click.secho(f"  ✓ All events have valid provider_id", fg="green")
         
-        # Check event location references
+        # Check event location references (only for occurrences)
         invalid_event_locations = []
         for event in events:
-            if event.location_id and event.location_id not in location_ids:
+            # Only EventOccurrence has location_id
+            location_id = getattr(event, "location_id", None)
+            if location_id and location_id not in location_ids:
                 invalid_event_locations.append(getattr(event, "event_id", getattr(event, "event_template_id", "unknown")))
         
         if invalid_event_locations:
@@ -315,8 +324,8 @@ def validate():
         if failed_geocode_count > 0:
             click.secho(f"  Failed geocoding: {failed_geocode_count}", fg="red")
         
-        # Events with locations
-        events_with_location = sum(1 for e in events if e.location_id)
+        # Events with locations (only occurrences have location_id)
+        events_with_location = sum(1 for e in events if getattr(e, "location_id", None))
         events_without_location = len(events) - events_with_location
         click.echo(f"  Events with location: {events_with_location}/{len(events)}")
         if events_without_location > 0:

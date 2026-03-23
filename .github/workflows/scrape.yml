@@ -27,15 +27,26 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN }}
         run: |
-          # Run full pipeline with geocoding and AI enrichment
-          # Skip AI if no API key is set
+          # Determine which features to enable based on available secrets
+          SKIP_AI=""
+          SKIP_GEOCODING=""
+          
           if [ -z "$OPENAI_API_KEY" ]; then
-            echo "No OpenAI API key found, skipping AI enrichment"
-            python run_pipeline.py run --skip-ai
+            echo "⚠️  No OpenAI API key found, skipping AI enrichment"
+            SKIP_AI="--skip-ai"
           else
-            echo "Running full pipeline with AI enrichment"
-            python run_pipeline.py run
+            echo "✅ OpenAI API key found, enabling AI enrichment"
           fi
+          
+          if [ -z "$MAPBOX_ACCESS_TOKEN" ]; then
+            echo "⚠️  No Mapbox token found, skipping geocoding"
+            SKIP_GEOCODING="--skip-geocoding"
+          else
+            echo "✅ Mapbox token found, enabling geocoding"
+          fi
+          
+          # Run pipeline with appropriate flags
+          python run_pipeline.py run $SKIP_AI $SKIP_GEOCODING
 
       - name: Commit updated data
         run: |
