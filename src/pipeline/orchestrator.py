@@ -322,16 +322,71 @@ class PipelineOrchestrator:
         Returns:
             Metrics dict with raw_data list
         """
-        providers = kwargs.get("providers")
+        from src.extract.pasta_evangelists import PastaEvangelistsScraper
+        from src.extract.caravan_coffee import CaravanCoffeeScraper
+        from src.extract.comptoir_bakery import ComptoirBakeryScraper
         
-        # TODO: Implement scraper execution
-        # For now, return placeholder metrics
-        logger.warning("Extract stage not yet implemented")
+        # Map of provider slugs to scraper classes
+        SCRAPER_REGISTRY = {
+            "pasta-evangelists": PastaEvangelistsScraper,
+            "caravan-coffee": CaravanCoffeeScraper,
+            "comptoir-bakery": ComptoirBakeryScraper,
+        }
+        
+        # Determine which providers to scrape
+        provider_filter = kwargs.get("providers")
+        if provider_filter:
+            # Filter to requested providers
+            scrapers_to_run = {
+                slug: scraper_cls
+                for slug, scraper_cls in SCRAPER_REGISTRY.items()
+                if slug in provider_filter
+            }
+            if not scrapers_to_run:
+                logger.warning(f"No scrapers found for providers: {provider_filter}")
+        else:
+            # Run all scrapers
+            scrapers_to_run = SCRAPER_REGISTRY
+        
+        # Execute scrapers
+        raw_data_list = []
+        providers_scraped = 0
+        providers_failed = 0
+        failed_providers = []
+        
+        for slug, scraper_cls in scrapers_to_run.items():
+            try:
+                logger.info(f"Running scraper: {slug}")
+                scraper = scraper_cls()
+                raw_data = scraper.scrape()
+                raw_data_list.append(raw_data)
+                providers_scraped += 1
+                logger.info(
+                    f"Successfully scraped {slug}: "
+                    f"{len(raw_data.raw_locations)} locations, "
+                    f"{len(raw_data.raw_events)} events, "
+                    f"{len(raw_data.raw_templates)} templates"
+                )
+            except Exception as e:
+                providers_failed += 1
+                failed_providers.append(slug)
+                logger.error(f"Failed to scrape {slug}: {e}", exc_info=True)
+                # Continue with other providers
+        
+        logger.info(
+            f"Extract stage complete: {providers_scraped} succeeded, "
+            f"{providers_failed} failed"
+        )
         
         return {
-            "raw_data": [],
-            "providers_scraped": 0,
-            "providers_failed": 0
+            "raw_data": raw_data_list,
+            "providers_scraped": providers_scraped,
+            "providers_failed": providers_failed,
+            "failed_providers": failed_providers,
+            "raw_records_count": sum(
+                len(rd.raw_locations) + len(rd.raw_events) + len(rd.raw_templates)
+                for rd in raw_data_list
+            )
         }
     
     def _run_normalize_stage(self, **kwargs: Any) -> dict[str, Any]:
@@ -345,18 +400,88 @@ class PipelineOrchestrator:
         """
         raw_data_list = kwargs.get("raw_data", [])
         
-        # TODO: Implement normalization logic
-        # For now, return placeholder metrics
-        logger.warning("Normalize stage not yet implemented")
+        if not raw_data_list:
+            logger.warning("No raw data to normalize")
+            return {
+                "providers": [],
+                "locations": [],
+                "events": [],
+                "provider_ids": [],
+                "providers_normalized": 0,
+                "locations_normalized": 0,
+                "templates_normalized": 0,
+                "occurrences_normalized": 0
+            }
+        
+        # Normalize each provider's data
+        all_providers = []
+        all_locations = []
+        all_events = []
+        provider_ids = []
+        
+        for raw_data in raw_data_list:
+            try:
+                logger.info(f"Normalizing data for {raw_data.provider_name}")
+                
+                # Normalize provider
+                provider = self.normalizer.normalize_provider(raw_data)
+                all_providers.append(provider)
+                provider_ids.append(provider.provider_id)
+                
+                # Normalize locations
+                locations = self.normalizer.normalize_locations(raw_data, provider.provider_id)
+                all_locations.extend(locations)
+                
+                # Build location map for event linking
+                # Map formatted_address -> location_id
+                location_map = {
+                    loc.formatted_address: loc.location_id
+                    for loc in locations
+                    if loc.formatted_address
+                }
+                
+                # Also map by location_name if available
+                for loc in locations:
+                    if loc.location_name:
+                        location_map[loc.location_name] = loc.location_id
+                
+                # Normalize events (templates and occurrences)
+                events = self.normalizer.normalize_events(
+                    raw_data, provider.provider_id, location_map
+                )
+                all_events.extend(events)
+                
+                logger.info(
+                    f"Normalized {raw_data.provider_name}: "
+                    f"{len(locations)} locations, {len(events)} events"
+                )
+                
+            except Exception as e:
+                logger.error(
+                    f"Failed to normalize {raw_data.provider_name}: {e}",
+                    exc_info=True
+                )
+                # Continue with other providers
+        
+        # Count templates vs occurrences
+        templates = [e for e in all_events if isinstance(e, EventTemplate)]
+        occurrences = [e for e in all_events if isinstance(e, EventOccurrence)]
+        
+        logger.info(
+            f"Normalize stage complete: {len(all_providers)} providers, "
+            f"{len(all_locations)} locations, {len(templates)} templates, "
+            f"{len(occurrences)} occurrences"
+        )
         
         return {
-            "providers": [],
-            "locations": [],
-            "events": [],
-            "provider_ids": [],
-            "providers_normalized": 0,
-            "locations_normalized": 0,
-            "events_normalized": 0
+            "providers": all_providers,
+            "locations": all_locations,
+            "events": all_events,
+            "provider_ids": provider_ids,
+            "providers_normalized": len(all_providers),
+            "locations_normalized": len(all_locations),
+            "templates_normalized": len(templates),
+            "occurrences_normalized": len(occurrences)
         }
     
     def _run_enrich_stage(self, **kwargs: Any) -> dict[str, Any]:
@@ -399,15 +524,32 @@ class PipelineOrchestrator:
             logger.info(f"Geocoding {len(locations)} locations")
 
             try:
-                # Initialize geocoder with Mapbox
-                from src.enrich.mapbox_geocoder import MapboxGeocoder
+                # Initialize geocoder - try Mapbox first, fallback to Nominatim
                 from src.enrich.cached_geocoder import CachedGeocoder
-
-                # Create MapboxGeocoder (will raise ValueError if API key missing)
-                mapbox_geocoder = MapboxGeocoder()
+                
+                geocoder = None
+                geocoder_name = None
+                
+                # Try Mapbox first (commercial, more accurate)
+                try:
+                    from src.enrich.mapbox_geocoder import MapboxGeocoder
+                    geocoder = MapboxGeocoder()
+                    geocoder_name = "Mapbox"
+                    logger.info("Using Mapbox geocoder (commercial)")
+                except ValueError:
+                    # Mapbox API key not available, try Nominatim
+                    logger.info("Mapbox API key not found, trying Nominatim")
+                
+                # Fallback to Nominatim (free, open source)
+                if geocoder is None:
+                    from src.enrich.nominatim_geocoder import NominatimGeocoder
+                    geocoder = NominatimGeocoder()
+                    geocoder_name = "Nominatim"
+                    logger.info("Using Nominatim geocoder (free, open source)")
 
                 # Wrap with caching
-                cached_geocoder = CachedGeocoder(mapbox_geocoder)
+                cached_geocoder = CachedGeocoder(geocoder)
+                logger.info(f"Geocoder initialized: {geocoder_name}")
 
                 # Geocode each location
                 for location in locations:
@@ -575,6 +717,15 @@ class PipelineOrchestrator:
         new_locations = kwargs.get("locations", [])
         new_events = kwargs.get("events", [])
         
+        if not new_providers:
+            logger.warning("No providers to sync")
+            return {
+                "providers": {"inserted": 0, "updated": 0, "unchanged": 0, "total": 0},
+                "locations": {"inserted": 0, "updated": 0, "unchanged": 0, "total": 0},
+                "templates": {"inserted": 0, "updated": 0, "unchanged": 0, "total": 0},
+                "occurrences": {"inserted": 0, "updated": 0, "unchanged": 0, "total": 0}
+            }
+        
         # Load existing records
         existing_providers = self.store.load_providers()
         existing_locations = self.store.load_locations()
@@ -610,10 +761,11 @@ class PipelineOrchestrator:
         # Apply lifecycle rules to occurrences
         now = datetime.now(timezone.utc)
         
-        # Mark expired events
+        # Mark expired events (all providers)
         merged_occurrences = mark_expired(merged_occurrences, now)
         
-        # Mark removed events per provider
+        # Mark removed events per provider (only for successfully scraped providers)
+        # This ensures failed scrapes don't mark existing records as removed
         for provider in new_providers:
             provider_id = provider.provider_id
             
@@ -626,15 +778,24 @@ class PipelineOrchestrator:
                 o.event_id for o in new_occurrences
                 if o.provider_id == provider_id
             }
+            new_location_ids = {
+                loc.location_id for loc in new_locations
+                if loc.provider_id == provider_id
+            }
             
-            # Mark removed templates
+            # Mark removed templates for this provider
             merged_templates = mark_removed(
                 merged_templates, new_template_ids, provider_id, now
             )
             
-            # Mark removed occurrences
+            # Mark removed occurrences for this provider
             merged_occurrences = mark_removed(
                 merged_occurrences, new_occurrence_ids, provider_id, now
+            )
+            
+            # Mark removed locations for this provider
+            merged_locations = mark_removed(
+                merged_locations, new_location_ids, provider_id, now
             )
         
         # Combine events

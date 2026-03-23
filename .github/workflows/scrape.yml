@@ -29,7 +29,6 @@ jobs:
         run: |
           # Determine which features to enable based on available secrets
           SKIP_AI=""
-          SKIP_GEOCODING=""
           
           if [ -z "$OPENAI_API_KEY" ]; then
             echo "⚠️  No OpenAI API key found, skipping AI enrichment"
@@ -38,15 +37,15 @@ jobs:
             echo "✅ OpenAI API key found, enabling AI enrichment"
           fi
           
+          # Geocoding is always enabled - uses Mapbox if token available, otherwise Nominatim (free)
           if [ -z "$MAPBOX_ACCESS_TOKEN" ]; then
-            echo "⚠️  No Mapbox token found, skipping geocoding"
-            SKIP_GEOCODING="--skip-geocoding"
+            echo "ℹ️  No Mapbox token found, using free Nominatim geocoder"
           else
-            echo "✅ Mapbox token found, enabling geocoding"
+            echo "✅ Mapbox token found, using Mapbox geocoder"
           fi
           
           # Run pipeline with appropriate flags
-          python run_pipeline.py run $SKIP_AI $SKIP_GEOCODING
+          python run_pipeline.py run $SKIP_AI
 
       - name: Commit updated data
         run: |
