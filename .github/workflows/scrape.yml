@@ -22,17 +22,34 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run scrapers
-        run: python run_all_scrapers.py
+      - name: Run pipeline
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          MAPBOX_ACCESS_TOKEN: ${{ secrets.MAPBOX_ACCESS_TOKEN }}
+        run: |
+          # Run full pipeline with geocoding and AI enrichment
+          # Skip AI if no API key is set
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "No OpenAI API key found, skipping AI enrichment"
+            python run_pipeline.py run --skip-ai
+          else
+            echo "Running full pipeline with AI enrichment"
+            python run_pipeline.py run
+          fi
 
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add *_experiences.json
+          
+          # Add all generated files
+          git add data/current/*.json
+          git add exports/*.csv
+          git add cache/
+          
           if git diff --cached --quiet; then
             echo "No data changes"
           else
-            git commit -m "Update scraped data [automated]"
+            git commit -m "Update scraped data and exports [automated]"
             git push
           fi
