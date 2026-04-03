@@ -9,7 +9,7 @@
     "source_base_url": "https://pensa.pastaevangelists.com/api/v2",
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.440928+00:00",
-    "last_seen_at": "2026-04-02T07:05:17.248478+00:00",
+    "last_seen_at": "2026-04-03T07:01:19.014028+00:00",
     "metadata": {}
   },
   "provider-caravan-coffee-roasters": {
@@ -22,7 +22,7 @@
     "source_base_url": "https://caravanandco.com/pages/coffee-school",
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.441009+00:00",
-    "last_seen_at": "2026-04-02T07:05:17.248478+00:00",
+    "last_seen_at": "2026-04-03T07:01:19.014028+00:00",
     "metadata": {}
   },
   "provider-comptoir-bakery": {
@@ -35,7 +35,7 @@
     "source_base_url": "https://www.comptoirbakery.co.uk/pages/all-our-workshops",
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.443459+00:00",
-    "last_seen_at": "2026-04-02T07:05:17.248478+00:00",
+    "last_seen_at": "2026-04-03T07:01:19.014028+00:00",
     "metadata": {}
   }
 }
