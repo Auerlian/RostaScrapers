@@ -31,7 +31,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.442392+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "2ae8b551516d",
     "record_hash": "94da261ec2e6"
@@ -68,7 +68,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.442882+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "7be73f520752",
     "record_hash": "79269d018d88"
@@ -105,7 +105,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.443033+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "e3e50f9d3495",
     "record_hash": "cff473f8c137"
@@ -142,7 +142,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.443142+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "da979a5d155f",
     "record_hash": "efc3a9983d90"
@@ -172,17 +172,17 @@
     "duration_minutes": null,
     "price_from": 105.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-sst05-20260411100000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s50u4-20260412100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/f892877a-b127-48f4-945f-82ee25711bec.jpg?crop=center&height=1000&v=1773323604&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.444463+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
-    "source_hash": "f28a88a8942f",
-    "record_hash": "2b50ac4c6f7f"
+    "source_hash": "9a7a519275cd",
+    "record_hash": "9a760fb918b1"
   },
   "event-template-comptoir-bakery-cake-baking-and-decorating-workshop-ticket-duo-wit": {
     "event_template_id": "event-template-comptoir-bakery-cake-baking-and-decorating-workshop-ticket-duo-wit",
@@ -209,17 +209,17 @@
     "duration_minutes": null,
     "price_from": 228.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-sst05-20260411100000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s50u4-20260412100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/f892877a-b127-48f4-945f-82ee25711bec.jpg?crop=center&height=1000&v=1773323604&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.444549+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
-    "source_hash": "1f862886f956",
-    "record_hash": "7b630e25ebdf"
+    "source_hash": "94601209f395",
+    "record_hash": "fc4cd4328fb4"
   },
   "event-template-comptoir-bakery-cake-baking-and-decorating-workshop-ticket-duo-for": {
     "event_template_id": "event-template-comptoir-bakery-cake-baking-and-decorating-workshop-ticket-duo-for",
@@ -246,17 +246,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-sst05-20260411100000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s50u4-20260412100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/f892877a-b127-48f4-945f-82ee25711bec.jpg?crop=center&height=1000&v=1773323604&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.444638+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
-    "source_hash": "ce50252bce8d",
-    "record_hash": "9cb1031a83c1"
+    "source_hash": "b4d63442485b",
+    "record_hash": "616a7a1f9f43"
   },
   "event-template-comptoir-bakery-croissant-workshop-individual-ticket": {
     "event_template_id": "event-template-comptoir-bakery-croissant-workshop-individual-ticket",
@@ -283,17 +283,17 @@
     "duration_minutes": null,
     "price_from": 105.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-sst05-20260411100000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s50u4-20260412100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-125.jpg?crop=center&height=1000&v=1743080149&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.444729+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
-    "source_hash": "0c2e5bea33e4",
-    "record_hash": "a106c157d4d7"
+    "source_hash": "a3c7f60c5e5a",
+    "record_hash": "747eec39c7cf"
   },
   "event-template-comptoir-bakery-croissant-workshop-ticket-duo-with-two-glasses-of-": {
     "event_template_id": "event-template-comptoir-bakery-croissant-workshop-ticket-duo-with-two-glasses-of-",
@@ -320,17 +320,17 @@
     "duration_minutes": null,
     "price_from": 228.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-sst05-20260411100000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s50u4-20260412100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-125.jpg?crop=center&height=1000&v=1743080149&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.444821+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
-    "source_hash": "83dd863cb1da",
-    "record_hash": "1bf8c95fb6a0"
+    "source_hash": "0b58a147d783",
+    "record_hash": "a4d7c6041790"
   },
   "event-template-comptoir-bakery-croissant-workshop-ticket-duo-for-celebration": {
     "event_template_id": "event-template-comptoir-bakery-croissant-workshop-ticket-duo-for-celebration",
@@ -357,17 +357,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-sst05-20260411100000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s50u4-20260412100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-125.jpg?crop=center&height=1000&v=1743080149&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.444907+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
-    "source_hash": "f0d9dfccdf80",
-    "record_hash": "2f49ed4ef102"
+    "source_hash": "e0045621a281",
+    "record_hash": "0a196cf8b366"
   },
   "event-template-comptoir-bakery-four-way-brioche-workshop-individual-ticket": {
     "event_template_id": "event-template-comptoir-bakery-four-way-brioche-workshop-individual-ticket",
@@ -401,7 +401,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-25T06:56:19.143661+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "94130d5e97af",
     "record_hash": "d30bb7890ba5"
@@ -438,7 +438,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-25T06:56:19.143833+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "594f42792a78",
     "record_hash": "aec8037c2928"
@@ -475,7 +475,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-25T06:56:19.144000+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "2f3ce5de97d3",
     "record_hash": "c0414915a198"
@@ -512,7 +512,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.445330+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "772369ba6e35",
     "record_hash": "cd7624384472"
@@ -549,7 +549,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.445416+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "b7c650a4c23d",
     "record_hash": "12e36b3f1b0b"
@@ -586,7 +586,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.445504+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "038a55147f36",
     "record_hash": "da73b4bbee62"
@@ -623,7 +623,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.445581+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "1c97920b3c4f",
     "record_hash": "47f76bbe4a7c"
@@ -660,7 +660,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.445663+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "b13dd2b5ed9d",
     "record_hash": "cff4bfadd50c"
@@ -697,7 +697,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.445746+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "4f84184c216e",
     "record_hash": "e6e5e93f7ea2"
@@ -734,7 +734,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.445830+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "75f2f00b2de3",
     "record_hash": "5d1072b1613b"
@@ -764,17 +764,17 @@
     "duration_minutes": null,
     "price_from": 105.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-se08h-20260411143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-sy7au-20260510100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Eclaire.jpg?crop=center&height=1000&v=1743092024&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.445913+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
-    "source_hash": "b34e30f676cf",
-    "record_hash": "154e72aa7e30"
+    "source_hash": "5756abb6ace3",
+    "record_hash": "4d3b49f2c1d5"
   },
   "event-template-comptoir-bakery-clair-choux-workshop-ticket-duo-with-two-glasses-o": {
     "event_template_id": "event-template-comptoir-bakery-clair-choux-workshop-ticket-duo-with-two-glasses-o",
@@ -801,17 +801,17 @@
     "duration_minutes": null,
     "price_from": 228.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-se08h-20260411143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-sy7au-20260510100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Eclaire.jpg?crop=center&height=1000&v=1743092024&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.446090+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
-    "source_hash": "23c59aeadba1",
-    "record_hash": "e3973dc69878"
+    "source_hash": "5b443f195412",
+    "record_hash": "93bc10107a4b"
   },
   "event-template-comptoir-bakery-clair-choux-workshop-ticket-duo-for-celebration": {
     "event_template_id": "event-template-comptoir-bakery-clair-choux-workshop-ticket-duo-for-celebration",
@@ -838,17 +838,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-se08h-20260411143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-sy7au-20260510100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Eclaire.jpg?crop=center&height=1000&v=1743092024&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.446206+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
-    "source_hash": "ca895c9ae31d",
-    "record_hash": "d0f06b601e5f"
+    "source_hash": "a21482f5fbb2",
+    "record_hash": "129a418bf200"
   },
   "event-template-comptoir-bakery-vanilla-slice-sweet-savoury-twist-workshop": {
     "event_template_id": "event-template-comptoir-bakery-vanilla-slice-sweet-savoury-twist-workshop",
@@ -882,7 +882,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.446297+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "401830fef274",
     "record_hash": "ca410d434591"
@@ -919,7 +919,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.446387+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "835673725682",
     "record_hash": "83075058dabf"
@@ -956,7 +956,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.446480+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "cba08e9977ce",
     "record_hash": "9fe19219ee6d"
@@ -993,7 +993,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.446567+00:00",
-    "last_seen_at": "2026-04-11T06:54:37.658729+00:00",
+    "last_seen_at": "2026-04-12T07:06:53.863626+00:00",
     "deleted_at": null,
     "source_hash": "386b47ffdb7e",
     "record_hash": "558132d1af6b"
