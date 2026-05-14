@@ -7,7 +7,7 @@
     "source_event_id": null,
     "title": "London Roastery Tour & Tasting",
     "start_at": "2022-10-22T10:30:00+01:00",
-    "end_at": "2026-06-13T12:00:00+01:00",
+    "end_at": "2026-06-20T12:00:00+01:00",
     "timezone": "Europe/London",
     "booking_url": "https://www.eventbrite.com/e/caravan-coffee-school-roastery-tour-and-tasting-class-tickets-431689724587",
     "price": 40.0,
@@ -25,10 +25,10 @@
     "age_max": null,
     "status": "expired",
     "first_seen_at": "2026-03-15T08:34:56.443276+00:00",
-    "last_seen_at": "2026-05-13T08:37:45.929891+00:00",
+    "last_seen_at": "2026-05-14T08:31:23.828883+00:00",
     "deleted_at": null,
-    "source_hash": "466c7226fcc2",
-    "record_hash": "f69266b43be9"
+    "source_hash": "d3f1109b5a63",
+    "record_hash": "2ef17ebac467"
   },
   "event-caravan-coffee-roasters-6d3a0d3d": {
     "event_id": "event-caravan-coffee-roasters-6d3a0d3d",
