@@ -31,7 +31,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.442392+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
     "source_hash": "2ae8b551516d",
     "record_hash": "94da261ec2e6"
@@ -68,7 +68,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.442882+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
     "source_hash": "7be73f520752",
     "record_hash": "79269d018d88"
@@ -105,7 +105,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.443033+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
     "source_hash": "e3e50f9d3495",
     "record_hash": "cff473f8c137"
@@ -142,7 +142,7 @@
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-03-15T08:34:56.443142+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
     "source_hash": "da979a5d155f",
     "record_hash": "efc3a9983d90"
@@ -155,8 +155,8 @@
     "slug": "chocolate-celebration-cake-individual-ticket",
     "category": null,
     "sub_category": null,
-    "description_raw": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | One ticket for one person for the Croissant, Pain au Chocolat & Pain aux Raisins Workshop.",
-    "description_clean": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | One ticket for one person for the Croissant, Pain au Chocolat & Pain aux Raisins Workshop.",
+    "description_raw": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | One ticket for one person for the Sourdough, Baguette & fougasse Workshop",
+    "description_clean": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | One ticket for one person for the Sourdough, Baguette & fougasse Workshop",
     "description_ai": null,
     "summary_short": null,
     "summary_medium": null,
@@ -172,17 +172,17 @@
     "duration_minutes": null,
     "price_from": 105.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s42u4-20260912100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/f892877a-b127-48f4-945f-82ee25711bec.jpg?crop=center&height=1000&v=1773323604&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-06-23T09:27:56.885567+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "d050fd3258af",
-    "record_hash": "b66227839669"
+    "source_hash": "0c3c2b3ab21e",
+    "record_hash": "b6abab141bbf"
   },
   "event-template-comptoir-bakery-chocolate-celebration-cake-ticket-duo-with-two-gla": {
     "event_template_id": "event-template-comptoir-bakery-chocolate-celebration-cake-ticket-duo-with-two-gla",
@@ -192,8 +192,8 @@
     "slug": "chocolate-celebration-cake-ticket-duo-with-two-gla",
     "category": null,
     "sub_category": null,
-    "description_raw": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons, with two glasses of wine for the Croissant, Pain au Chocolat & Pain aux Raisins Workshop. The wine list is available on demand.",
-    "description_clean": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons, with two glasses of wine for the Croissant, Pain au Chocolat & Pain aux Raisins Workshop. The wine list is available on demand.",
+    "description_raw": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons, with two glasses of wine for the Sourdough loaf, Baguette and Fougasse Workshop. The wine list is available on demand.",
+    "description_clean": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons, with two glasses of wine for the Sourdough loaf, Baguette and Fougasse Workshop. The wine list is available on demand.",
     "description_ai": null,
     "summary_short": null,
     "summary_medium": null,
@@ -209,17 +209,17 @@
     "duration_minutes": null,
     "price_from": 228.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s42u4-20260912100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/f892877a-b127-48f4-945f-82ee25711bec.jpg?crop=center&height=1000&v=1773323604&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-06-23T09:27:56.885752+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "5ee830cbf0d5",
-    "record_hash": "0f4cc5ca107f"
+    "source_hash": "119b91ccd933",
+    "record_hash": "f0f966617e4f"
   },
   "event-template-comptoir-bakery-chocolate-celebration-cake-ticket-duo-for-celebrat": {
     "event_template_id": "event-template-comptoir-bakery-chocolate-celebration-cake-ticket-duo-for-celebrat",
@@ -229,8 +229,8 @@
     "slug": "chocolate-celebration-cake-ticket-duo-for-celebrat",
     "category": null,
     "sub_category": null,
-    "description_raw": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons, with one of our cake with candles for celebrations. The list of our cakes is available on demand.",
-    "description_clean": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons, with one of our cake with candles for celebrations. The list of our cakes is available on demand.",
+    "description_raw": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons for the Sourdough loaf, Baguette and Fougasse Workshop, with one of our celebration loaf cake with candles. The list of our cakes is available on demand.",
+    "description_clean": "Learn to transform a simple cake into a stunning masterpiece in our hands- on workshop led by our chef. | Two tickets for two persons for the Sourdough loaf, Baguette and Fougasse Workshop, with one of our celebration loaf cake with candles. The list of our cakes is available on demand.",
     "description_ai": null,
     "summary_short": null,
     "summary_medium": null,
@@ -246,17 +246,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s42u4-20260912100000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/f892877a-b127-48f4-945f-82ee25711bec.jpg?crop=center&height=1000&v=1773323604&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-06-23T09:27:56.885927+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "3262e94269cf",
-    "record_hash": "1468de3f885b"
+    "source_hash": "30e3d6f992ef",
+    "record_hash": "ad26a1e87838"
   },
   "event-template-comptoir-bakery-hand-holding-butter-croissant-individual-ticket": {
     "event_template_id": "event-template-comptoir-bakery-hand-holding-butter-croissant-individual-ticket",
@@ -283,17 +283,17 @@
     "duration_minutes": null,
     "price_from": 105.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-125.jpg?crop=center&height=1000&v=1743080149&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.112532+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "13b374443940",
-    "record_hash": "8c4fbcec967f"
+    "source_hash": "338924729be0",
+    "record_hash": "1858b9ee6313"
   },
   "event-template-comptoir-bakery-hand-holding-butter-croissant-ticket-duo-with-two-": {
     "event_template_id": "event-template-comptoir-bakery-hand-holding-butter-croissant-ticket-duo-with-two-",
@@ -320,17 +320,17 @@
     "duration_minutes": null,
     "price_from": 228.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-125.jpg?crop=center&height=1000&v=1743080149&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.112683+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "c00da19d0689",
-    "record_hash": "77c10f2cbb45"
+    "source_hash": "3e80fe76c72f",
+    "record_hash": "1b237f26a388"
   },
   "event-template-comptoir-bakery-hand-holding-butter-croissant-ticket-duo-for-celeb": {
     "event_template_id": "event-template-comptoir-bakery-hand-holding-butter-croissant-ticket-duo-for-celeb",
@@ -357,17 +357,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-125.jpg?crop=center&height=1000&v=1743080149&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.112830+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "306f240f18f6",
-    "record_hash": "deb8d7cbf9be"
+    "source_hash": "53a753bc162f",
+    "record_hash": "0f87675e74c3"
   },
   "event-template-comptoir-bakery-sliced-pistachio-brionut-individual-ticket": {
     "event_template_id": "event-template-comptoir-bakery-sliced-pistachio-brionut-individual-ticket",
@@ -394,17 +394,17 @@
     "duration_minutes": null,
     "price_from": 105.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-121.jpg?crop=center&height=1000&v=1743090177&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.112989+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "8ff0b0006b60",
-    "record_hash": "86ca73a317a1"
+    "source_hash": "e06cc6045e80",
+    "record_hash": "a078b38594b4"
   },
   "event-template-comptoir-bakery-sliced-pistachio-brionut-ticket-duo-with-two-glass": {
     "event_template_id": "event-template-comptoir-bakery-sliced-pistachio-brionut-ticket-duo-with-two-glass",
@@ -431,17 +431,17 @@
     "duration_minutes": null,
     "price_from": 228.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-121.jpg?crop=center&height=1000&v=1743090177&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.113142+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "6b651a0c49c3",
-    "record_hash": "4c508bfbc66c"
+    "source_hash": "f9f045e24450",
+    "record_hash": "5e5b9cc501e0"
   },
   "event-template-comptoir-bakery-sliced-pistachio-brionut-ticket-duo-for-celebratio": {
     "event_template_id": "event-template-comptoir-bakery-sliced-pistachio-brionut-ticket-duo-for-celebratio",
@@ -468,17 +468,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Comptoit_Bakery-121.jpg?crop=center&height=1000&v=1743090177&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.113278+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "aea1e61d3696",
-    "record_hash": "4534505854cf"
+    "source_hash": "a53a3a2af4d4",
+    "record_hash": "3f979f4a24b5"
   },
   "event-template-comptoir-bakery-piping-filling-into-tartlettes-individual-ticket": {
     "event_template_id": "event-template-comptoir-bakery-piping-filling-into-tartlettes-individual-ticket",
@@ -505,17 +505,17 @@
     "duration_minutes": null,
     "price_from": 105.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/tarteletteworkshop3_Medium_50c53caf-76a4-419c-b329-74cc24d1ca2d.jpg?crop=center&height=1000&v=1756977830&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.113418+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "5d2f6eeec1ea",
-    "record_hash": "9ab8bf839120"
+    "source_hash": "402ed5fec63b",
+    "record_hash": "d57c701c8c5d"
   },
   "event-template-comptoir-bakery-piping-filling-into-tartlettes-ticket-duo-with-two": {
     "event_template_id": "event-template-comptoir-bakery-piping-filling-into-tartlettes-ticket-duo-with-two",
@@ -542,17 +542,17 @@
     "duration_minutes": null,
     "price_from": 228.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/tarteletteworkshop3_Medium_50c53caf-76a4-419c-b329-74cc24d1ca2d.jpg?crop=center&height=1000&v=1756977830&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.113561+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "77703fc4c1b4",
-    "record_hash": "f5bf5a7bf2d6"
+    "source_hash": "24367eb52b2c",
+    "record_hash": "3977da2da924"
   },
   "event-template-comptoir-bakery-piping-filling-into-tartlettes-ticket-duo-for-cele": {
     "event_template_id": "event-template-comptoir-bakery-piping-filling-into-tartlettes-ticket-duo-for-cele",
@@ -579,17 +579,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/tarteletteworkshop3_Medium_50c53caf-76a4-419c-b329-74cc24d1ca2d.jpg?crop=center&height=1000&v=1756977830&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.113694+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "42b39ff93303",
-    "record_hash": "37d38694294a"
+    "source_hash": "43f476c7befa",
+    "record_hash": "26a6d79bff8f"
   },
   "event-template-comptoir-bakery-hand-holding-3-macarons-individual-ticket": {
     "event_template_id": "event-template-comptoir-bakery-hand-holding-3-macarons-individual-ticket",
@@ -616,17 +616,17 @@
     "duration_minutes": null,
     "price_from": 105.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/macaroon_8de1d570-24a0-4ccf-926e-68375860b374.png?crop=center&height=1000&v=1756981405&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.113829+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "5e4ddd42b733",
-    "record_hash": "ea45ca04b2e7"
+    "source_hash": "2c3d4ea2721f",
+    "record_hash": "8e94ac8cafa8"
   },
   "event-template-comptoir-bakery-hand-holding-3-macarons-ticket-duo-with-two-glasse": {
     "event_template_id": "event-template-comptoir-bakery-hand-holding-3-macarons-ticket-duo-with-two-glasse",
@@ -653,17 +653,17 @@
     "duration_minutes": null,
     "price_from": 228.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/macaroon_8de1d570-24a0-4ccf-926e-68375860b374.png?crop=center&height=1000&v=1756981405&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.113965+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "d39a455ab83a",
-    "record_hash": "395a4da08661"
+    "source_hash": "46f7de9f9750",
+    "record_hash": "d538187c5275"
   },
   "event-template-comptoir-bakery-hand-holding-3-macarons-ticket-duo-for-celebration": {
     "event_template_id": "event-template-comptoir-bakery-hand-holding-3-macarons-ticket-duo-for-celebration",
@@ -690,17 +690,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/macaroon_8de1d570-24a0-4ccf-926e-68375860b374.png?crop=center&height=1000&v=1756981405&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.114120+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "deeb43ae15ae",
-    "record_hash": "21648a4b0d96"
+    "source_hash": "1d6df9f3566d",
+    "record_hash": "5a006c7108e5"
   },
   "event-template-comptoir-bakery-eclair-pastries-individual-ticket": {
     "event_template_id": "event-template-comptoir-bakery-eclair-pastries-individual-ticket",
@@ -727,17 +727,17 @@
     "duration_minutes": null,
     "price_from": 105.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Eclaire.jpg?crop=center&height=1000&v=1743092024&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.115969+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "7f205fc6d9cc",
-    "record_hash": "7eda4c95e3a2"
+    "source_hash": "cc7766aea788",
+    "record_hash": "0b419afb2e50"
   },
   "event-template-comptoir-bakery-eclair-pastries-ticket-duo-with-two-glasses-of-win": {
     "event_template_id": "event-template-comptoir-bakery-eclair-pastries-ticket-duo-with-two-glasses-of-win",
@@ -764,17 +764,17 @@
     "duration_minutes": null,
     "price_from": 228.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Eclaire.jpg?crop=center&height=1000&v=1743092024&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.116183+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "3d44c6b8b639",
-    "record_hash": "d8b61668b304"
+    "source_hash": "8ef69c2fd702",
+    "record_hash": "9620bf1367a1"
   },
   "event-template-comptoir-bakery-eclair-pastries-ticket-duo-for-celebration": {
     "event_template_id": "event-template-comptoir-bakery-eclair-pastries-ticket-duo-for-celebration",
@@ -801,17 +801,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/Eclaire.jpg?crop=center&height=1000&v=1743092024&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.116341+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "abbf611048bc",
-    "record_hash": "bcde3df029bf"
+    "source_hash": "43083fff9ac2",
+    "record_hash": "cdec61925701"
   },
   "event-template-comptoir-bakery-icing-on-millefeuille-individual-ticket": {
     "event_template_id": "event-template-comptoir-bakery-icing-on-millefeuille-individual-ticket",
@@ -838,17 +838,17 @@
     "duration_minutes": null,
     "price_from": 105.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/workshopmillefeuille3.png?crop=center&height=1000&v=1756982097&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.116491+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "f68e418dec5a",
-    "record_hash": "db1b17118cc2"
+    "source_hash": "0a89ff760df2",
+    "record_hash": "076ea900453c"
   },
   "event-template-comptoir-bakery-icing-on-millefeuille-ticket-duo-with-two-glasses-": {
     "event_template_id": "event-template-comptoir-bakery-icing-on-millefeuille-ticket-duo-with-two-glasses-",
@@ -875,17 +875,17 @@
     "duration_minutes": null,
     "price_from": 228.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/workshopmillefeuille3.png?crop=center&height=1000&v=1756982097&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.116637+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "b08c2331381e",
-    "record_hash": "c1f1489e92da"
+    "source_hash": "d0ce38de7499",
+    "record_hash": "9d7eb7ae8e70"
   },
   "event-template-comptoir-bakery-icing-on-millefeuille-ticket-duo-for-celebration": {
     "event_template_id": "event-template-comptoir-bakery-icing-on-millefeuille-ticket-duo-for-celebration",
@@ -912,17 +912,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/workshopmillefeuille3.png?crop=center&height=1000&v=1756982097&width=1000"
     ],
     "location_scope": null,
     "status": "active",
     "first_seen_at": "2026-07-15T07:57:58.116780+00:00",
-    "last_seen_at": "2026-09-06T10:04:09.233495+00:00",
+    "last_seen_at": "2026-09-07T11:17:16.155302+00:00",
     "deleted_at": null,
-    "source_hash": "f8b40b6a8b58",
-    "record_hash": "fc44be20c2d9"
+    "source_hash": "478472b6677a",
+    "record_hash": "9f85420cdab1"
   },
   "event-template-comptoir-bakery-person-holding-bread-made-in-sourdough-and-baguett": {
     "event_template_id": "event-template-comptoir-bakery-person-holding-bread-made-in-sourdough-and-baguett",
@@ -949,17 +949,17 @@
     "duration_minutes": null,
     "price_from": 240.0,
     "currency": "GBP",
-    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-svev5-20260906143000",
+    "source_url": "https://bookwhen.com/comptoirbakeryschool/e/ev-s7deb-20260912143000",
     "image_urls": [
       "https://www.comptoirbakery.co.uk/cdn/shop/files/IMG_2980.heic?crop=center&height=1000&v=1771604626&width=1000"
     ],
     "location_scope": null,
     "status": "active",
-    "first_seen_at": "2026-09-06T10:04:07.465922+00:00",
-    "last_seen_at": "2026-09-06T10:04:07.465922+00:00",
+    "first_seen_at": "2026-09-07T11:17:14.457980+00:00",
+    "last_seen_at": "2026-09-07T11:17:14.457980+00:00",
     "deleted_at": null,
-    "source_hash": "f9ed5ec4aef3",
-    "record_hash": "6e37868d21e4"
+    "source_hash": "273b5117607c",
+    "record_hash": "a570619a10eb"
   },
   "event-template-comptoir-bakery-chocolate-celebration-cake-two-for-one-ticket": {
     "event_template_id": "event-template-comptoir-bakery-chocolate-celebration-cake-two-for-one-ticket",
