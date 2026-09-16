@@ -7,7 +7,7 @@
     "source_event_id": null,
     "title": "London Roastery Tour & Tasting",
     "start_at": "2022-10-22T10:30:00+01:00",
-    "end_at": "2026-10-17T12:00:00+01:00",
+    "end_at": "2026-11-14T12:00:00+00:00",
     "timezone": "Europe/London",
     "booking_url": "https://www.eventbrite.com/e/caravan-coffee-school-roastery-tour-and-tasting-class-tickets-431689724587",
     "price": 40.0,
@@ -25,10 +25,10 @@
     "age_max": null,
     "status": "expired",
     "first_seen_at": "2026-03-15T08:34:56.443276+00:00",
-    "last_seen_at": "2026-09-15T10:49:54.342967+00:00",
+    "last_seen_at": "2026-09-16T10:39:02.609201+00:00",
     "deleted_at": null,
-    "source_hash": "1536c1c0b1a3",
-    "record_hash": "77ded6a2d941"
+    "source_hash": "64d95f00fc32",
+    "record_hash": "2dd091a35cef"
   },
   "event-caravan-coffee-roasters-19905088": {
     "event_id": "event-caravan-coffee-roasters-19905088",
@@ -38,10 +38,10 @@
     "source_event_id": null,
     "title": "Home Filter Class",
     "start_at": "2023-01-14T13:30:00+00:00",
-    "end_at": "2026-03-14T15:30:00+00:00",
+    "end_at": "2026-11-14T15:00:00+00:00",
     "timezone": "Europe/London",
     "booking_url": "https://www.eventbrite.com/e/caravan-coffee-school-home-filter-pourover-brewing-class-tickets-482408275137",
-    "price": null,
+    "price": 75.0,
     "currency": "GBP",
     "capacity": null,
     "remaining_spaces": null,
@@ -56,10 +56,10 @@
     "age_max": null,
     "status": "expired",
     "first_seen_at": "2026-05-15T08:42:19.028971+00:00",
-    "last_seen_at": "2026-09-15T10:49:54.342967+00:00",
+    "last_seen_at": "2026-09-16T10:39:02.609201+00:00",
     "deleted_at": null,
-    "source_hash": "c7698b9c3800",
-    "record_hash": "02b2e0652dd9"
+    "source_hash": "775d4248676e",
+    "record_hash": "b9aa7a9af356"
   },
   "event-caravan-coffee-roasters-6d3a0d3d": {
     "event_id": "event-caravan-coffee-roasters-6d3a0d3d",
@@ -87,7 +87,7 @@
     "age_max": null,
     "status": "expired",
     "first_seen_at": "2026-03-15T08:34:56.443408+00:00",
-    "last_seen_at": "2026-09-15T10:49:54.342967+00:00",
+    "last_seen_at": "2026-09-16T10:39:02.609171+00:00",
     "deleted_at": null,
     "source_hash": "9d4bf848d9f2",
     "record_hash": "6271c4ec5110"
@@ -100,10 +100,10 @@
     "source_event_id": null,
     "title": "Milk & Latte Art Class",
     "start_at": "2023-01-21T13:30:00+00:00",
-    "end_at": "2026-01-17T15:30:00+00:00",
+    "end_at": "2026-10-17T15:00:00+01:00",
     "timezone": "Europe/London",
     "booking_url": "https://www.eventbrite.com/e/caravan-coffee-school-home-milklatte-art-class-tickets-482433209717",
-    "price": null,
+    "price": 75.0,
     "currency": "GBP",
     "capacity": null,
     "remaining_spaces": null,
@@ -118,9 +118,9 @@
     "age_max": null,
     "status": "expired",
     "first_seen_at": "2026-05-15T08:42:19.029347+00:00",
-    "last_seen_at": "2026-09-15T10:49:54.342967+00:00",
+    "last_seen_at": "2026-09-16T10:39:02.609201+00:00",
     "deleted_at": null,
-    "source_hash": "0539dae7daf2",
-    "record_hash": "c13215830f18"
+    "source_hash": "102572845608",
+    "record_hash": "73285cf78fd0"
   }
 }
